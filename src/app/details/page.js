@@ -5,7 +5,7 @@ import SectionThree from "../components/ServiceDetailPage/SectionThree";
 import SectionTwo from "../components/ServiceDetailPage/SectionTwo";
 
 
-const page = () => {
+const Page = () => {
     // 1. states/hook variables
 
     // functions/methods
@@ -22,4 +22,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

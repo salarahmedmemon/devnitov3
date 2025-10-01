@@ -6,7 +6,7 @@ import SectionFive from "../components/CareersPage/SectionFive";
 import SectionSix from "../components/CareersPage/SectionSix";
 import Footer from "../components/Footer";
 
-const page = () => {
+const Page = () => {
     // 1. states/hook variables
 
     // 2. functions/methods
@@ -25,4 +25,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

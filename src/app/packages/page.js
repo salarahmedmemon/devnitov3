@@ -4,7 +4,7 @@ import SectionOne from "../components/PackagesPage/SectionOne";
 import SectionThree from "../components/PackagesPage/SectionThree";
 import SectionTwo from "../components/PackagesPage/SectionTwo";
 
-const page = () => {
+const Page = () => {
     // 1. states/hook variables
 
     // 2. functions/methods
@@ -21,4 +21,4 @@ const page = () => {
     )
 };
 
-export default page;
+export default Page;

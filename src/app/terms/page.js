@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import SectionOne from "../components/TermsAndConditionPage/SectionOne";
 import SectionTwo from "../components/TermsAndConditionPage/SectionTwo";
 
-const page = () => {
+const Page = () => {
     // 1. states/hook variables
 
     // 2. functions/methods
@@ -17,4 +17,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

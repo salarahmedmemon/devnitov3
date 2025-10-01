@@ -13,7 +13,7 @@ import SectionFour from "../components/AboutPage/SectionFour";
 import SectionFive from "../components/AboutPage/SectionFive";
 import Footer from "../components/Footer";
 
-const page = () => {
+const Page = () => {
     // 1. states/hook variables
     const { loaded } = useContext(LoadContext);
     const sectionRef = useRef();
@@ -47,4 +47,4 @@ const page = () => {
     )
 };
 
-export default page;
+export default Page;
