@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* HEADER STYLING */
+@keyframes rotateOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.rotate-once:hover {
+  animation: rotateOnce 0.6s ease-in-out;
+}
+
+/* SECTION ONE IMAGES ANIMATION */
+.first-column, .third-column {
+  animation: downStepsColumns 5s linear infinite;
+}
+
+.second-column {
+  animation: upStepsColumns 5s linear infinite;
+}
+
+@keyframes downStepsColumns {
+  /* Start at 0 */
+  0%   { transform: translateY(0); }
+
+  /* First down */
+  10%  { transform: translateY(30px); }
+  20%  { transform: translateY(30px); } /* pause 1s */
+
+  /* Second down */
+  30%  { transform: translateY(60px); }
+  40%  { transform: translateY(60px); } /* pause 1s */
+
+  /* Third down */
+  50%  { transform: translateY(90px); }
+  60%  { transform: translateY(90px); } /* pause 1s */
+
+  /* Back to top */
+  80%  { transform: translateY(0); }
+
+  /* Ensure smooth reset */
+  100% { transform: translateY(0); }
+}
+
+
+
+@keyframes upStepsColumns {
+  /* Start at 0 */
+  0%   { transform: translateY(0); }
+
+  /* First up */
+  10%  { transform: translateY(-30px); }
+  20%  { transform: translateY(-30px); } /* pause 1s */
+
+  /* Second up */
+  30%  { transform: translateY(-60px); }
+  40%  { transform: translateY(-60px); } /* pause 1s */
+
+  /* Third up */
+  50%  { transform: translateY(-90px); }
+  60%  { transform: translateY(-90px); } /* pause 1s */
+
+  /* Back to center */
+  80%  { transform: translateY(0); }
+
+  /* Ensure smooth reset */
+  100% { transform: translateY(0); }
+}
+
+
+.images:hover .first-column, .images:hover .second-column, .images:hover .third-column{
+    animation-play-state: paused !important;
+}
+
+/* SECTION THREE STYLING */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border {
+    background: linear-gradient(90deg, #1AE4FA, #1CDE63, #FA1AC2);
+    background-size: 400% 400%; 
+    animation: gradientMove 4s linear infinite;
+}
+
+
+
+
+/* SECTION FOUR STYLING */
+.animate-slide {
+  animation: slide 12s ease infinite;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }        /* initial */
+  20%  { transform: translateX(-10%); }     /* step 1 */
+  40%  { transform: translateX(-20%); }     /* step 2 */
+  60%  { transform: translateX(-30%); }     /* step 3 */     /* go back halfway */
+  100% { transform: translateX(0); }        /* return to start */
+}
+
+/* SECTION FIVE STYLING */
+.blur-circle, .blur-circle1 {
+  box-shadow: 90px 100px 100px 80px #ad1b88;
+  transition: .4s ease;
+}
+
+.blur-circle1 {
+  box-shadow: 100px 100px 120px 60px #1AE4FA;
+}
+
+.right-blur-circle {
+  box-shadow: 0px 0px 120px 100px #1AE4FA;
+}
+
+.blur-circle2 {
+  box-shadow: 100px 100px 100px 45px #1CDE6380;
+}
+
+.blur-animation {
+  animation: scaleAnimation 6s linear infinite;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+
+
+/* SETION THREE STYLING */
+
+/* FOR VERY LARGE SCREEN */
+@media (min-width: 1440px) {
+  .projects {
+    height: 1031px;
+  }
+  .projects .right-image {
+    top: 26px;
+    right: 5%;
+  }
+  .projects .left-image {
+    bottom: 66px;
+    left: 4%;
+  }
+  .main-glass {
+    width: 1320px;
+    height: 873px;
+  }
+  .main-content {
+    width: 1320px;
+  }
+  .desktop-projects {
+    width: 1280px;
+    gap:16px
+  }
+  .project-one {
+    width: 264.08px;
+    height: 427.61px;
+  }
+  .project-two {
+    width: 451.1px;
+    height: 209.57px;
+  }
+  .project-three {
+    width: 526.28px;
+    height: 362.76px;
+  }
+  .project-four {
+    width: 264.08px;
+    height: 142.85px;
+  }
+  .project-four .overlay {
+    padding-top: 30px;
+  }
+  .project-four:hover .overlay {
+    height: 100%;
+  }
+  .project-five {
+    width: 451.1px;
+    height: 362.67px;
+    margin-top: -220px;
+  }
+  .project-six {
+    width: 526.28px;
+    height: 209.57px;
+    margin-top: -68px;
+  }
 }
