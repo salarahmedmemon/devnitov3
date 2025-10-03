@@ -167,16 +167,15 @@ function FAQItem({ q, a1, a2, id }) {
     <div
       ref={wrapperRef}
       // we no longer depend on onMouseLeave; document listener handles "leave"
-      className="w-full sm:w-[45%] p-[.4vw] sm:p-[.2vw] md:p-[.1vw] mt-[2vw] rounded-lg relative bg-gradient-to-r to-[#1CDE63D9] via-[#1AE4FA] from-[#FA1AC2]"
+      className="w-full sm:w-[45%] lg:w-[90%] lg:mx-auto p-[.4vw] sm:p-[.2vw] md:p-[.1vw] mt-[2vw] rounded-lg relative bg-gradient-to-r to-[#1CDE63D9] via-[#1AE4FA] from-[#FA1AC2]"
     >
       <div className="w-full bg-[#1C2B3B] rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300">
         {/* Top Row */}
         <div className="flex items-center justify-between gap-4">
           {/* question turns green when open */}
           <p
-            className={`text-[4.2vw] sm:text-[1rem] md:text-[1.4rem] transition-colors duration-300 ${
-              open ? 'text-green-500' : 'text-white'
-            }`}
+            className={`text-[4.2vw] sm:text-[1rem] md:text-[1.4rem] transition-colors duration-300 ${open ? 'text-green-500' : 'text-white'
+              }`}
           >
             {q}
           </p>
@@ -294,7 +293,7 @@ const SectionSix = () => {
         handlers.forEach(({ icon, handler }) => {
           try {
             icon.removeEventListener('mouseenter', handler);
-          } catch (e) {}
+          } catch (e) { }
         });
       }
       ctx.revert();
@@ -303,9 +302,12 @@ const SectionSix = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#000C1B] section-six relative overflow-hidden">
+    <section ref={sectionRef} className="w-full lg:min-h-[650px] bg-[#000C1B] section-six relative overflow-hidden">
+      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10'>
+        <img src='/img/homepage/background-image.png' className='w-[1440px] mt-[120px]' />
+      </div>
+      
       <div className='w-[0vw] h-[0vw] rounded-full absolute top-[100px] left-[-60px] opacity-[50%] blur-circle2'></div>
-      {/* <div className='w-[0vw] h-[0vw] rounded-full absolute top-[60%] right-[0px] opacity-[50%] blur-circle1'></div> */}
 
       <div className="w-full h-[100px] sm:h-[150px] bg-white pt-[26px] ps-[26px] sm:pt-[39px] sm:ps-[86px]">
         <div className="w-[454px] h-[74px]">
@@ -314,15 +316,38 @@ const SectionSix = () => {
         </div>
       </div>
 
-      <div className="w-full p-5">
+      {/* <div className="w-full p-5">
         <div className="flex items-center justify-center sm:gap-4 flex-wrap mt-[6vw] mb-[3vw]">
           {faqs.map((f) => (
             <FAQItem key={f.id} id={f.id} q={f.q} a1={f.a1} a2={f.a2} />
           ))}
         </div>
-      </div>
+      </div> */}
+      <div className="w-full p-5">
+        {/* Mobile / Tablet Layout (stacked with flex-wrap) */}
+        <div className="flex items-center justify-center sm:gap-4 flex-wrap mt-[6vw] mb-[3vw] lg:hidden">
+          {faqs.map((f) => (
+            <FAQItem key={f.id} id={f.id} q={f.q} a1={f.a1} a2={f.a2} />
+          ))}
+        </div>
 
-      <div className="w-full h-[.4vw] sm:h-[.1vw] gradient-border mt-6"></div>
+        {/* Large Device Layout (2 fixed columns) */}
+        <div className="hidden w-full mt-[40px] lg:grid lg:grid-cols-2">
+         
+          <div className="flex flex-col">
+            {faqs.slice(0, 3).map((f) => (
+              <FAQItem key={f.id} id={f.id} q={f.q} a1={f.a1} a2={f.a2} />
+            ))}
+          </div>
+
+        
+          <div className="flex flex-col">
+            {faqs.slice(3, 6).map((f) => (
+              <FAQItem key={f.id} id={f.id} q={f.q} a1={f.a1} a2={f.a2} />
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

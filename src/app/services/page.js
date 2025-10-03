@@ -12,10 +12,9 @@ const Page = () => {
 
     // 3. return statement/jsx
     return (
-        <div>
+        <div className="overflow-hidden">
             <SectionOne />
             <SectionTwo />
-            {/* <SectionThree /> */}
             <UpdatedSectionThree />
             <SectionFour />
             <Footer />

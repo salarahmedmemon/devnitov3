@@ -29,33 +29,37 @@ const Maq = () => {
   ];
 
   return (
-    <div className="w-full text-white mt-10    md:w-[60%]    lg:w-[50%]   xl:w-[847px]">
-      <h1 className="font-semibold text-[20px]    md:text-[3vw]   lg:text-[3vw]   xl:text-[36px]">Most Asked Questions</h1>
+    <div className="w-full text-white mt-10 md:w-[60%] lg:w-[50%] xl:w-[847px]">
+      <h1 className="font-semibold text-[20px] md:text-[3vw] lg:text-[3vw] xl:text-[36px]">
+        Most Asked Questions
+      </h1>
 
-      <div className="w-full mt-5 flex flex-col gap-4  xl:mt-[38px]  xl:gap-[40px]">
+      <div className="w-full mt-5 flex flex-col gap-4 xl:mt-[38px] xl:gap-[40px]">
         {questions.map((item, index) => (
           <div
             key={index}
-            className="w-ful h-[45px] border border-[#77CCF3] text-[#77CCF3] rounded-lg p-2 px-3   sm:h-[10vw] sm:border-[2px]   md:h-[7vw] md:border-[2px]    lg:h-[6vw] lg:border-[2px]   xl:h-[71px] xl:border-[2px]"
+            className="w-full border border-[#77CCF3] text-[#77CCF3] rounded-lg p-3 sm:border-[2px] md:border-[2px] lg:border-[2px] xl:border-[2px]"
           >
             {/* Question header */}
             <div
-              className="flex items-center justify-between text-[12px] cursor-pointer  sm:text-[3vw]   md:text-[2.2vw]   lg:text-[2vw]   xl:text-[20px]"
+              className="flex items-center justify-between text-[12px] cursor-pointer sm:text-[3vw] md:text-[2.2vw] lg:text-[2vw] xl:text-[20px]"
               onClick={() => toggleQuestion(index)}
             >
               <p>{item.q}</p>
-              <span className="text-[16px] font-bold    sm:text-[4vw]    md:text-[3vw]   lg:text-[2.4vw]  xl:text-[30px]">
+              <span className="text-[16px] font-bold sm:text-[4vw] md:text-[3vw] lg:text-[2.4vw] xl:text-[30px]">
                 {openIndex === index ? "-" : "+"}
               </span>
             </div>
 
-            {/* Answer with smooth transition */}
+            {/* Answer with smooth expand/collapse */}
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 openIndex === index ? "max-h-40 mt-3" : "max-h-0"
               }`}
             >
-              <p className="text-[12px] sm:text-[1.6vw] md:text-[1.2vw] text-gray-300">{item.a}</p>
+              <p className="text-[12px] sm:text-[1.6vw] md:text-[1.2vw] text-gray-300">
+                {item.a}
+              </p>
             </div>
           </div>
         ))}

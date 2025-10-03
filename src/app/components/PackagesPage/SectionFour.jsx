@@ -60,8 +60,8 @@ const SectionFour = () => {
 
             {/* TITLE */}
             <div ref={titleRef} className="title relative text-center mb-10 opacity-0">
-                <div className="w-[75vw] sm:w-[35vw] md:w-[22vw] h-[.8vw] sm:h-[.3vw] md:h-[.2vw] bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl pt-4 sm:pt-6">
+                <div className="w-[50%] sm:w-[35vw] md:w-[22vw] h-[2px] bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl pt-[40px] sm:pt-6">
                     Ask For The Custom
                 </h1>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#4C4886] font-semibold">

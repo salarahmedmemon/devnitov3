@@ -9,90 +9,106 @@ const SectionThree = () => {
     const containerRef = useRef(null);
     const h1Ref = useRef(null);
     const h2Ref = useRef(null);
-    const circleRefs = useRef([]);
+    const circleRefsDesktop = useRef([]);
+const circleRefsMobile = useRef([]);
 
-    useEffect(() => {
-        if (!containerRef.current) return;
+useEffect(() => {
+  if (!containerRef.current) return;
 
-        // Use gsap.context for scoping
-        const ctx = gsap.context(() => {
-            // Animate h1 (from right → left)
-            gsap.fromTo(
-                h1Ref.current,
-                { x: 100, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: h1Ref.current,
-                        start: 'top 80%',
-                        toggleActions: 'play none none none',
-                    },
-                }
-            );
+  const ctx = gsap.context(() => {
+    // Headings
+    gsap.fromTo(
+      h1Ref.current,
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: h1Ref.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
 
-            // Animate h2 (from left → right)
-            gsap.fromTo(
-                h2Ref.current,
-                { x: -100, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1,
-                    ease: 'power3.out',
-                    scrollTrigger: {
-                        trigger: h2Ref.current,
-                        start: 'top 80%',
-                        toggleActions: 'play none none none',
-                    },
-                }
-            );
+    gsap.fromTo(
+      h2Ref.current,
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: h2Ref.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
 
-            // Random circle animation
-            let activeIndex = null;
-            const animateRandomCircle = () => {
-                const allCircles = circleRefs.current.filter(Boolean);
-                if (allCircles.length === 0) return;
+    // Circle animation setup
+    const setupCircleAnimation = (circleArray) => {
+      let activeIndex = null;
 
-                // hide previous (if any)
-                if (activeIndex !== null && allCircles[activeIndex]) {
-                    gsap.to(allCircles[activeIndex], {
-                        scale: 0,
-                        opacity: 0,
-                        duration: 0.3,
-                        ease: "power2.inOut",
-                    });
-                }
+      const animateRandomCircle = () => {
+        const allCircles = circleArray.filter(Boolean);
+        if (allCircles.length === 0) return;
 
-                // pick a new index that is different from last one
-                let newIndex = activeIndex;
-                while (newIndex === activeIndex) {
-                    newIndex = Math.floor(Math.random() * allCircles.length);
-                }
-                activeIndex = newIndex;
+        // hide previous
+        if (activeIndex !== null && allCircles[activeIndex]) {
+          gsap.to(allCircles[activeIndex], {
+            scale: 0,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power2.inOut",
+          });
+        }
 
-                // animate only the new one
-                gsap.fromTo(
-                    allCircles[newIndex],
-                    { scale: 0, opacity: 0 },
-                    {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.6,
-                        ease: "back.out(1.7)",
-                    }
-                );
-            };
+        // pick new one
+        let newIndex = activeIndex;
+        while (newIndex === activeIndex) {
+          newIndex = Math.floor(Math.random() * allCircles.length);
+        }
+        activeIndex = newIndex;
+
+        if (!allCircles[newIndex]) return; // ✅ safety check
+        gsap.fromTo(
+          allCircles[newIndex],
+          { scale: 0, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.6,
+            ease: "back.out(1.7)",
+          }
+        );
+      };
+
+      const interval = setInterval(animateRandomCircle, 3500);
+
+      // ✅ cleanup correctly
+      return () => clearInterval(interval);
+    };
+
+    // Run for both groups
+    const cleanupDesktop = setupCircleAnimation(circleRefsDesktop.current);
+    const cleanupMobile = setupCircleAnimation(circleRefsMobile.current);
+
+    // ✅ cleanup both on unmount
+    return () => {
+      cleanupDesktop?.();
+      cleanupMobile?.();
+    };
+  }, containerRef);
+
+  return () => ctx.revert();
+}, []);
 
 
-            const interval = setInterval(animateRandomCircle, 2500);
-            return () => clearInterval(interval);
-        }, containerRef);
 
-        return () => ctx.revert(); // cleanup on unmount
-    }, []);
 
     return (
         <div ref={containerRef} className="projects w-full h-[465px] sm:h-[790px] lg:h-[900px] xl:h-[900px] relative bg-[#0A131C] pt-[15px] sm:pt-[20px] lg:pt-[58px] overflow-hidden">
@@ -129,7 +145,7 @@ const SectionThree = () => {
 
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectone.png')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[0] = el)}
+                                ref={(el) => (circleRefsDesktop.current[0] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -150,7 +166,7 @@ const SectionThree = () => {
                     <div className="project-two w-[40%] h-[150px] lg:h-[190px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projecttwo.jpg')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[1] = el)}
+                                ref={(el) => (circleRefsDesktop.current[1] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -172,7 +188,7 @@ const SectionThree = () => {
                     <div className="project-three w-[38%] h-[260px] lg:h-[350px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectthree.jpg')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[2] = el)}
+                                ref={(el) => (circleRefsDesktop.current[2] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -192,7 +208,7 @@ const SectionThree = () => {
                     <div className="project-four w-[20%] h-[130px] lg:h-[200px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfour.png')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[3] = el)}
+                                ref={(el) => (circleRefsDesktop.current[3] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -212,7 +228,7 @@ const SectionThree = () => {
                     <div className="project-five w-[40%] h-[240px] lg:h-[360px] p-[2px] mt-[-110px] lg:mt-[-160px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfive.jpg')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[4] = el)}
+                                ref={(el) => (circleRefsDesktop.current[4] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -234,7 +250,7 @@ const SectionThree = () => {
                     <div className="project-six w-[38%] lg:h-[200px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectsix.png')] bg-cover bg-center relative">
                             <div
-                                ref={(el) => (circleRefs.current[5] = el)}
+                                ref={(el) => (circleRefsDesktop.current[5] = el)}
                                 className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
@@ -257,6 +273,13 @@ const SectionThree = () => {
                     {/* PROJECT ONE */}
                     <div className="w-[180px] h-[119px] sm:w-[33%] sm:h-[280px] p-[2px] gradient-border">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectone.png')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[0] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden w-full h-[238px] sm:h-[160px] md:h-[200px] bg-[#000] absolute bottom-0 right-0 pt-[50px] opacity-[80%] rounded-tl-full">
                                 <h3 className="font-[500] text-[20px] sm:text-[14px] text-[#FFFFFF] absolute right-[30px]">Printing Media</h3>
@@ -270,6 +293,13 @@ const SectionThree = () => {
                     {/* PROJECT TWO */}
                     <div className="w-[178px] h-[66px] sm:w-[65%] sm:h-[160px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projecttwo.jpg')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[1] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden absolute bottom-0 right-0 w-0 h-0 opacity-0
                     transition-all duration-500 ease-in-out
@@ -287,6 +317,13 @@ const SectionThree = () => {
                     {/* PROJECT THREE */}
                     <div className="w-[178.99px] h-[96.51px] sm:w-[33%] sm:h-[120px] mt-[10px] sm:mt-0 p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfour.png')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[2] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden w-0 h-0 group-hover:w-[55%] sm:group-hover:w-[70%]  group-hover:h-full bg-[#000] absolute bottom-0 right-0 pt-[50px] sm:pt-[30px] group-hover:opacity-[80%] rounded-tl-full opacity-0
                     transition-all duration-500 ease-in-out">
@@ -301,6 +338,13 @@ const SectionThree = () => {
                     {/* PROJECT FOUR */}
                     <div className="w-[179px] h-[121px] sm:w-[65%] sm:h-[240px] mt-[-44px] sm:mt-[-120px] p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectthree.jpg')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[3] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden w-0 h-0 group-hover:w-[55%] sm:group-hover:w-[70%] md:group-hover:w-[60%] group-hover:h-[70%] sm:group-hover:h-[90%] bg-[#000] absolute bottom-0 right-0 opacity-0
                     transition-all duration-500 ease-in-out pt-[100px] sm:pt-[40px] group-hover:opacity-80 rounded-tl-full">
@@ -315,6 +359,13 @@ const SectionThree = () => {
                     {/* PROJECT FIVE */}
                     <div className="w-[180px] h-[110px] sm:w-[49%] sm:h-[185px] mt-[10px] sm:mt-0 p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectsix.png')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[4] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden w-0 h-0 group-hover:w-[50%] sm:group-hover:w-[70%] group-hover:h-full bg-[#000] absolute bottom-0 right-0 opacity-0
                     transition-all duration-500 ease-in-out pt-[46px] group-hover:opacity-80 rounded-tl-full">
@@ -329,6 +380,13 @@ const SectionThree = () => {
                     {/* PROJECT SIX */}
                     <div className="w-[176px] h-[141px] sm:w-[49%] sm:h-[185px] mt-[-21px] sm:mt-0 p-[2px] gradient-border group overflow-hidden">
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfive.jpg')] bg-cover bg-center relative">
+                            <div
+                                ref={(el) => (circleRefsMobile.current[5] = el)}
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                            >
+                                <div className="w-full h-full rounded-full bg-white"></div>
+                            </div>
+
                             {/* OVERLAY */}
                             <div className="hidden absolute bottom-0 right-0 w-0 h-0 opacity-0
                     transition-all duration-500 ease-in-out

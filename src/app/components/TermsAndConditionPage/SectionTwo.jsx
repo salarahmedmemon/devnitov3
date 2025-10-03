@@ -2,13 +2,13 @@ const SectionTwo = () => {
   return (
     <div className="w-full min-h-screen bg-[#EEE] relative overflow-hidden">
       {/* Top-right circle */}
-      <div className="w-[40vw] max-w-[300px] aspect-square bg-[#BCD4EF] rounded-full absolute -top-[5vw] -right-[10vw] p-[.1vw] z-[1]">
+      <div className="hidden md:block w-[40vw] max-w-[300px] aspect-square bg-[#BCD4EF] rounded-full absolute -top-[5vw] -right-[10vw] p-[.1vw] z-[1]">
         <div className="w-full h-full bg-gradient-to-b to-[#DFE6EE] from-[#EBECEE] rounded-full"></div>
       </div>
 
       {/* Bottom-left circle */}
-      <div className="w-[100vw] max-w-[800px] aspect-square bg-[#BCD4EF] rounded-full absolute -bottom-[15vw] -left-[10vw] p-[.1vw] z-[1]">
-        <div className="w-full h-full bg-white rounded-full"></div>
+      <div className="hidden md:block w-[100vw] max-w-[800px] aspect-square bg-white rounded-full absolute -bottom-[15vw] -left-[10vw] p-[3px] z-[1]">
+        <div className="w-full h-full bg-[#EEEE] rounded-full"></div>
       </div>
 
       {/* Section 1 */}

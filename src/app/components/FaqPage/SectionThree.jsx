@@ -72,7 +72,7 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <div className="w-full h-[70vh] md:min-h-[105vh] bg-[#0A131C]">
+    <div className="w-full h-[480px] md:h-[900px] bg-[#0A131C]">
       {/* Header */}
       <h1 ref={leftRef} className="text-[#4C4886] pt-[6vw] text-center font-semibold text-[4vw] md:text-[2vw]">
         A Frequently Asked Question
@@ -96,7 +96,7 @@ const SectionThree = () => {
 
       {/* Category buttons */}
       <div ref={rightRef} className="mx-auto w-fit mt-[4vw] text-[#848688] text-[2.5vw] md:text-[1.5vw] flex gap-[2vw] md:gap-[1vw]">
-        <button className="bg-transparent font-semibold border-1 px-2 rounded border-[#3D3C6D] text-[#3D3C6D]">
+        <button className="bg-transparent font-semibold border-[2px] px-2 rounded border-[#3D3C6D] text-[#3D3C6D]">
           General
         </button>
         <button>Build</button>
@@ -122,7 +122,7 @@ const SectionThree = () => {
                 setClicked(true);
                 setActiveIndex(i);
               }}
-              className="w-full h-[5vh] md:h-[10vh] border-1 border-gray-300 rounded-lg relative cursor-pointer"
+              className="w-full h-[5vh] md:h-[8vh] border-[2px] border-gray-300 rounded-lg relative cursor-pointer"
             >
               <img
                 src="/img/faqpage/arrow.png"
@@ -140,10 +140,10 @@ const SectionThree = () => {
               <div
                 key={i}
                 onClick={() => setActiveIndex(i)}
-                className={`w-full h-[10vh] flex items-center justify-between px-[1vw] cursor-pointer rounded-lg ${
+                className={`w-full h-[16%] md:h-[6vh] flex items-center justify-between px-[1vw] cursor-pointer rounded-lg ${
                   activeIndex === i
                     ? "bg-[#4C4886] text-white"
-                    : "border-1 border-gray-200 text-black"
+                    : "border-[2px] border-gray-200 text-black"
                 }`}
               >
                 {activeIndex === i && (

@@ -21,7 +21,7 @@ const SectionThree = () => {
                     software like aldus pagemaker including version of Lorem ipsum.
                 </p>
 
-                <p className="w-[90%] text-[12px] font-[400] mt-5    sm:text-[2.4vw]    md:text-[2vw]    lg:w-[55%] lg:text-[2vw]    xl:w-[812px] xl:text-[16px]">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                <p className="w-[90%] text-[12px] font-[400] mt-5  sm:text-[2.4vw]    md:text-[2vw]    lg:w-[55%] lg:text-[2vw]    xl:w-[812px] xl:text-[16px]">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     ipsum has been the industry's standard text ever since the 1500s. When an unknown
                     printer took a gallery of type and scrambled it to make a type specimen book.
                 </p>
@@ -84,36 +84,6 @@ const SectionThree = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* <div className="w-[40%] text-[#77CCF3] flex items-center justify-between gap-1   md:gap-[20px]    lg:w-[40%] lg:gap-[10px]   xl:w-[317px] xl:gap-[17px]">
-                        <span className="text-[14px] flex font-[400]     md:text-[3vw]     lg:text-[2vw]   xl:text-[32px]">01 <b className="text-white" >.</b> </span>
-                        <div className="flex flex-col">
-                            <h1 className="text-[14px] w-[262px] font-[600]    md:text-[3vw]    lg:text-[2.4vw]   xl:text-[24px] xl:w-[262px]">Latest Technologies</h1>
-                            <p className="text-white text-[10px] w-[150px]   md:text-[2vw] md:w-[100%]      lg:text-[1.8vw] lg:w-[100%]   xl:text-[12px] xl:w-[262px]">Lorem ipsum is simply dummy text of the printing and typesetting
-                                indutsry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="w-[40%] text-[#77CCF3] flex items-center justify-between gap-1   md:gap-[20px]    lg:w-[40%] lg:gap-[10px]   xl:w-[317px] xl:gap-[17px]">
-                        <span className="text-[14px] flex font-[400]     md:text-[3vw]     lg:text-[2vw]   xl:text-[32px]">01 <b className="text-white" >.</b> </span>
-                        <div className="flex flex-col">
-                            <h1 className="text-[14px] w-[262px] font-[600]    md:text-[3vw]    lg:text-[2.4vw]   xl:text-[24px] xl:w-[262px]">Latest Technologies</h1>
-                            <p className="text-white text-[10px] w-[150px]   md:text-[2vw] md:w-[100%]      lg:text-[1.8vw] lg:w-[100%]   xl:text-[12px] xl:w-[262px]">Lorem ipsum is simply dummy text of the printing and typesetting
-                                indutsry.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="w-[40%] text-[#77CCF3] flex items-center justify-between gap-1   md:gap-[20px]    lg:w-[40%] lg:gap-[10px]   xl:w-[317px] xl:gap-[17px]">
-                        <span className="text-[14px] flex font-[400]     md:text-[3vw]     lg:text-[2vw]   xl:text-[32px]">01 <b className="text-white" >.</b> </span>
-                        <div className="flex flex-col">
-                            <h1 className="text-[14px] w-[262px] font-[600]    md:text-[3vw]    lg:text-[2.4vw]   xl:text-[24px] xl:w-[262px]">Latest Technologies</h1>
-                            <p className="text-white text-[10px] w-[150px]   md:text-[2vw] md:w-[100%]      lg:text-[1.8vw] lg:w-[100%]   xl:text-[12px] xl:w-[262px]">Lorem ipsum is simply dummy text of the printing and typesetting
-                                indutsry.
-                            </p>
-                        </div>
-                    </div> */}
 
                 </div>
 

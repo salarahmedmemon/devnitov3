@@ -75,11 +75,11 @@ const SectionTwo = () => {
             </div>
 
             {/* CONTENT */}
-            <div ref={contentRef} className="lg:hidden w-[92%] h-[640px] mx-auto flex flex-col items-start sm:mt-[220px] md:mt-[40px]">
+            <div ref={contentRef} className="lg:hidden w-[92%] h-[1000px]  mx-auto flex flex-col items-start sm:mt-[220px] md:mt-[40px]">
                 <h1 className="w-[202px] h-[40px] border-l-[3px] border-[#4C4886] text-[28px] sm:text-[32px] font-[600] text-[#4C4886] ps-[6px]">Case Studies</h1>
                 <p className="text-[16px] sm:text-[20px] font-[400] pt-[26px] text-[#AAAAAA]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stancenturies,</p>
                 <span className="text-[12px] sm:text-[18px] text-[#4C4886] font-[700] mt-[24px]"> Cost-effective and Comprehensive IT Outsourcing Services:</span>
-                <div className="w-[242px] sm:w-[400px] mt-[24px] flex flex-col">
+                <div className="w-[242px] sm:w-[400px] mt-[24px] flex flex-col gap-[20px]">
                     <div className="w-full h-[134px] sm:h-[200px] p-[10px]">
                         <h3 className="text-[16px] sm:text-[24px] font-[500] text-[#4C4886]">.Problem Statement</h3>
                         <p className="text-[12px] sm:text-[16px] font-[400] text-[#AAAAAA] pt-[17px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil vitae temporibus ipsam ducimus corrupti tempora dolor perspiciatis esse delectus, quaerat veritatis labore. Qui, sunt. Reprehenderit nisi reiciendis soluta debitis esse.</p>

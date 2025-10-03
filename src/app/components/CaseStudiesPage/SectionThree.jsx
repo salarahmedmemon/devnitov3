@@ -106,7 +106,7 @@ const SectionThree = () => {
           <div className="pb-10">
             <div
               className={`w-[60vw] md:w-[80vw] gradient-border mx-auto rounded-lg p-1 transition-all duration-700 ease-in-out cursor-pointer ${
-                isExpanded ? "h-[90vh] sm:h-[100vw] md:h-[30vw]" : "h-[75vh] sm:h-[60vw] md:h-[21vw]"
+                isExpanded ? "h-[120vh] sm:h-[100vw] md:h-[30vw]" : "h-[75vh] sm:h-[60vw] md:h-[21vw]"
               }`}
               onMouseEnter={() => setIsExpanded(true)}
               onMouseLeave={() => setIsExpanded(false)}

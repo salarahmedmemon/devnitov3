@@ -88,31 +88,46 @@ const Header = () => {
     <div
       ref={headerRef}
       // INITIAL hidden state so there's nothing to flash before animation runs
-      className="opacity-0 transform z-[9999] relative translate-x-[100%] will-change-transform w-[94%] md:w-[88%] lg:w-[90%] h-[41px] sm:h-[74.98px] bg-white mx-auto rounded-[10px] sm:rounded-tl-[20px] sm:rounded-bl-[20px] md:rounded-[20px] px-[20px] py-[10px] flex items-center justify-between"
+      className="header opacity-0 transform z-[9999] relative translate-x-[100%] will-change-transform w-[94%] md:w-[88%] lg:w-[90%] h-[41px] sm:h-[74.98px] bg-white mx-auto rounded-[10px] sm:rounded-tl-[20px] sm:rounded-bl-[20px] md:rounded-[20px] px-[20px] py-[10px] flex items-center justify-between"
     >
       {/* HAMBURGER */}
       <div className="block lg:hidden relative cursor-pointer" onClick={toggleMenu}>
         <img className="w-[16.89px] sm:w-[40px]" src="/img/homepage/hamburger.png" alt="Menu" />
         <div
           ref={menuRef}
-          className="w-[140px] sm:w-[200px] top-[50px] sm:top-[80px] left-[0%] fixed bg-white z-[9999] rounded shadow-xl"
+          className="w-[100px] sm:w-[200px] top-[50px] sm:top-[80px] left-[0%] fixed bg-white z-[9999] rounded shadow-xl"
           style={{ transform: "translateX(-120%)", opacity: 0 }}
         >
-          <ul className="flex flex-col items-start gap-2 sm:gap-3 z-[9999] p-2 text-[10px] sm:text-[20px] ps-[40px]">
-            {links.map(({ href, label }, index) => {
-              const isActive = pathname === href;
-              return (
-                <li
-                  key={href}
-                  ref={(el) => (mobileLinkRefs.current[index] = el)}
-                  className={`relative cursor-pointer py-0 overflow-visible ${isActive ? "text-[#4C4886] font-semibold" : "text-[#666666]"}`}
-                >
-                  <Link href={href} className="relative z-10 inline-block">{label}</Link>
-                  <span className={`underline absolute left-1/2 -translate-x-1/2 bottom-0 h-[2px] transition-all ${isActive ? "w-full bg-[#4C4886]" : "w-0 bg-black"}`}></span>
-                </li>
-              );
-            })}
-          </ul>
+          <ul className="flex flex-col items-start gap-2 sm:gap-3 z-[9999] p-2 text-[10px] sm:text-[20px]">
+  {links.map(({ href, label }, index) => {
+    const isActive = pathname === href;
+    return (
+      <li
+        key={href}
+        ref={(el) => (mobileLinkRefs.current[index] = el)}
+        className={`relative w-full cursor-pointer overflow-visible ${
+          isActive ? "text-[#4C4886] font-semibold" : "text-[#666666]"
+        }`}
+      >
+        <Link
+          href={href}
+          className="relative block w-full"
+        >
+          <span className="relative inline-block">
+            {label}
+            <span
+              className={`absolute left-0 bottom-0 h-[2px] transition-all ${
+                isActive ? "w-full bg-[#4C4886]" : "w-0 bg-black"
+              }`}
+            ></span>
+          </span>
+        </Link>
+      </li>
+    );
+  })}
+</ul>
+
+
         </div>
       </div>
 
