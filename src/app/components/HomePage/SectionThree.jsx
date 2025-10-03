@@ -275,7 +275,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectone.png')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[0] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>
@@ -295,7 +295,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projecttwo.jpg')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[1] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>
@@ -319,7 +319,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfour.png')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[2] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>
@@ -340,7 +340,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectthree.jpg')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[3] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>
@@ -361,7 +361,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectsix.png')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[4] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>
@@ -382,7 +382,7 @@ useEffect(() => {
                         <div className="w-full h-full bg-[url('/img/homepage/sectionthree/projectfive.jpg')] bg-cover bg-center relative">
                             <div
                                 ref={(el) => (circleRefsMobile.current[5] = el)}
-                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-14 sm:top-2 right-14 sm:right-5 flex items-center justify-center opacity-0 scale-0"
+                                className="w-[10vw] sm:w-[5vw] h-[10vw] sm:h-[5vw] rounded-full bg-[#ebebeb] p-2 absolute top-[4%] right-[2%] flex items-center justify-center opacity-0 scale-0"
                             >
                                 <div className="w-full h-full rounded-full bg-white"></div>
                             </div>

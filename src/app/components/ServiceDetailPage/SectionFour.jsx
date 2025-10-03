@@ -5,7 +5,7 @@ const SectionFour = () => {
 
     // 3. return statement/jsx
     return (
-        <div className="w-full h-[700px]  sm:h-[1000px]   md:h-[500px]   lg:h-[600px]  bg-[#EEEEEE] relative overflow-hidden flex flex-col-reverse items-center md:items-start md:flex-row">
+        <div className="w-full h-[700px]  sm:h-[1000px]   md:h-[800px]  bg-[#EEEEEE] relative overflow-hidden flex flex-col-reverse items-center md:items-start md:flex-row">
 
             <div className="hidden md:block w-[25vw] h-[25vw] bg-[#B7D2EF] rounded-full p-[.2vw] absolute top-[-9vw] right-[-12vw]">
                 <div className="w-full h-full rounded-full bg-gradient-to-b to-[#E6EAEE] from-[#E7EBEE]"></div>

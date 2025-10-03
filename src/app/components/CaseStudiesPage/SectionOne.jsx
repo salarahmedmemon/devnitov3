@@ -50,7 +50,7 @@ const SectionOne = () => {
         <div ref={sectionRef} className="w-full h-[514px] sm:h-[560px] md:h-[640px] xl:h-[725px] pt-[9px] md:pt-[20px] xl:pt-[30px]">
             
             <div className="w-full h-[514px] sm:h-[560px] md:h-[640px] xl:h-[725px] absolute top-0 left-0 bg-[#141d24]">
-              <div className="w-full h-full opacity-0">
+              <div className="w-full h-full opacity-65">
                     <Image
                       src="/img/casestudiespage/image.png"
                       alt="background image"
