@@ -108,14 +108,14 @@ body {
 
 /* SECTION FOUR STYLING */
 .animate-slide {
-  animation: slide 12s ease infinite;
+  animation: slide 4s ease infinite;
 }
 
 @keyframes slide {
   0%   { transform: translateX(0); }        /* initial */
-  20%  { transform: translateX(-10%); }     /* step 1 */
-  40%  { transform: translateX(-20%); }     /* step 2 */
-  60%  { transform: translateX(-30%); }     /* step 3 */     /* go back halfway */
+  20%  { transform: translateX(-8%); }     /* step 1 */
+  40%  { transform: translateX(-16%); }     /* step 2 */
+  60%  { transform: translateX(-26%); }     /* step 3 */     /* go back halfway */
   100% { transform: translateX(0); }        /* return to start */
 }
 
@@ -148,6 +148,12 @@ body {
   to {
     transform: scale(1.2);
   }
+}
+
+.homepage-section-six {
+  background-image: url("/img/homepage/background-image.png");
+  background-repeat: no-repeat;
+  background-position: center 160px;
 }
 
 

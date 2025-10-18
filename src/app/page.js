@@ -46,7 +46,6 @@ const page = () => {
       <SectionFour />
       <SectionFive />
       <SectionSix />
-      <Footer />
     </div>
   )
 };

@@ -72,7 +72,7 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <div className="w-full h-[480px] md:h-[900px] bg-[#0A131C]">
+    <div className="w-full h-[480px] md:h-[740px] bg-[#0A131C]">
       {/* Header */}
       <h1 ref={leftRef} className="text-[#4C4886] pt-[6vw] text-center font-semibold text-[4vw] md:text-[2vw]">
         A Frequently Asked Question
@@ -86,11 +86,11 @@ const SectionThree = () => {
         <input
           type="text"
           placeholder="Search"
-          className="bg-white py-2 md:py-[.5vw] mt-[1.5vw] rounded-lg w-[35vw] md:w-[28vw] text-gray-500 text-[2vw] md:text-[1.3vw] ps-[5vw] md:ps-[3.4vw]"
+          className="bg-white py-2 md:py-[.5vw] mt-[1.5vw] rounded-lg w-[35vw] md:w-[28vw] text-gray-500 text-[2.8vw] md:text-[1.3vw] ps-[5vw] md:ps-[3.4vw]"
         />
         <img
           src="/img/faqpage/image04.png"
-          className="absolute top-[3.1vw] md:top-[2.3vw] left-[1.5vw] md:left-[1vw] w-[2vw] md:w-[1.5vw]"
+          className="absolute top-[4vw] md:top-[2.3vw] left-[1.5vw] md:left-[1vw] w-[2vw] md:w-[1.5vw]"
         />
       </div>
 
@@ -135,7 +135,7 @@ const SectionThree = () => {
       ) : (
         <div className="w-[90vw] mx-auto mt-[2vw] flex gap-4">
           {/* Left Column */}
-          <div className="w-[48%] h-[20vh] md:h-full flex flex-col gap-6">
+          <div className="w-[48%] h-[240px] flex flex-col gap-6">
             {questions.map((q, i) => (
               <div
                 key={i}
@@ -143,15 +143,13 @@ const SectionThree = () => {
                 className={`w-full h-[16%] md:h-[6vh] flex items-center justify-between px-[1vw] cursor-pointer rounded-lg ${
                   activeIndex === i
                     ? "bg-[#4C4886] text-white"
-                    : "border-[2px] border-gray-200 text-black"
+                    : "border-[2px] border-gray-200 text-white"
                 }`}
               >
-                {activeIndex === i && (
                 <>
                   <h2 className="font-semibold text-[1.8vw] md:text-[1.3vw]">{q.title}</h2>
                   <img src="/img/faqpage/whitearrow.png" className="w-[4vw]" />
                 </>
-                )}
               </div>
             ))}
           </div>

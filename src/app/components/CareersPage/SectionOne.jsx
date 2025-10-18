@@ -8,40 +8,56 @@ import { LoadContext } from "../ClientWrapper";
 
 const SectionOne = () => {
     // 1. states/hook variables
-    const { loaded } = useContext(LoadContext);
-    const sectionRef = useRef(null);
+  const { loaded } = useContext(LoadContext);
+  const sectionRef = useRef(null);
+  const imgRef1 = useRef(null);
+  const imgRef2 = useRef(null);
+  const contentRef = useRef(null);
+  const rightRef = useRef(null);
+  const tl = useRef(null);
 
-    // LARGE SCREEN REFS
-    const imgRef1 = useRef(null);
-    const imgRef2 = useRef(null);
-    const contentRef = useRef(null);
-    const rightRef = useRef(null);
-    const tl = useRef(null);
+  // Animation on page load
+  useLayoutEffect(() => {
+    if (!loaded || !sectionRef.current) return;
 
-    // MOBILE REFS
-    // const mImg1 = useRef(null);
-    // const mImg2 = useRef(null);
-    // const mContent = useRef(null);
-    // const mRight = useRef(null);
+    const ctx = gsap.context(() => {
+      if (window.innerWidth > 1280) {
+        tl.current = gsap.timeline({ paused: true });
 
-    useLayoutEffect(() => {
-        if (!loaded || !sectionRef.current) return;
+        tl.current.fromTo(
+          imgRef1.current,
+          { y: -100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          imgRef2.current,
+          { y: 100, x: -100, opacity: 0 },
+          { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          contentRef.current,
+          { x: -150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          rightRef.current,
+          { x: 150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
 
-        const ctx = gsap.context(() => {
-            if (window.innerWidth > 1280) {
-                tl.current = gsap.timeline({ paused: true });
-                tl.current.fromTo(imgRef1.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(imgRef2.current, { y: 100, x: -100, opacity: 0 }, { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(contentRef.current, { x: -150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(rightRef.current, { x: 150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
+        // Play animation automatically after short delay
+        setTimeout(() => {
+          tl.current.play();
+        }, 300); // 0.3s delay after page load
+      }
+    }, sectionRef);
 
-                const handleEnter = () => { if (tl.current.paused()) tl.current.play(); };
-                sectionRef.current.addEventListener("mousemove", handleEnter);
-            }
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, [loaded]);
+    return () => ctx.revert();
+  }, [loaded]);
 
     // 2. functions/methods
 
@@ -86,7 +102,7 @@ const SectionOne = () => {
                         </p>
                         <button className="w-[146px] h-[46px] sm:w-[200px] sm:h-[37px] bg-white text-[#4C4886] text-[12px] font-[600] rounded-[5px] mt-[8px]   md:w-[207px] md:h-[44px] md:text-[20px]   xl:mt-[40px] relative group">
                             Talk to our expert
-                            <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-500 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
+                            <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-200 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
                         </button>
                     </div>
                     <div ref={rightRef} className="main-img-container w-[196px] h-[201px] sm:w-[400px] sm:h-[100px]  xl:w-[500px]  xl:h-[200px]   flex items-center justify-center">

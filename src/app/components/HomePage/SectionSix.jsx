@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Footer from '../Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -164,46 +165,51 @@ function FAQItem({ q, a1, a2, id }) {
   }, []);
 
   return (
-    <div
-      ref={wrapperRef}
-      // we no longer depend on onMouseLeave; document listener handles "leave"
-      className="w-full sm:w-[45%] lg:w-[90%] lg:mx-auto p-[.4vw] sm:p-[.2vw] md:p-[.1vw] mt-[2vw] rounded-lg relative bg-gradient-to-r to-[#1CDE63D9] via-[#1AE4FA] from-[#FA1AC2]"
-    >
-      <div className="w-full bg-[#1C2B3B] rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300">
-        {/* Top Row */}
-        <div className="flex items-center justify-between gap-4">
-          {/* question turns green when open */}
-          <p
-            className={`text-[4.2vw] sm:text-[1rem] md:text-[1.4rem] transition-colors duration-300 ${open ? 'text-green-500' : 'text-white'
-              }`}
-          >
-            {q}
-          </p>
+   <div
+  ref={wrapperRef}
+  className="relative w-full sm:w-[45%] lg:w-[90%] lg:mx-auto mt-[2vw] rounded-lg p-[2px] bg-gradient-to-r from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9]"
+  style={{
+    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+    WebkitMaskComposite: "xor",
+    maskComposite: "exclude",
+  }}
+>
+  <div className="w-full bg-transparent rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300 backdrop-blur-[2px]">
+    {/* Top Row */}
+    <div className="flex items-center justify-between gap-4">
+      <p
+        className={`text-[4.2vw] sm:text-[1rem] md:text-[1.4rem] transition-colors duration-300 ${
+          open ? "text-green-500" : "text-white"
+        }`}
+      >
+        {q}
+      </p>
 
-          {/* icon button: click only */}
-          <button
-            onClick={handleIconClick}
-            aria-expanded={open}
-            aria-controls={`faq-content-${id}`}
-            className={`w-7 h-7 md:w-8 md:h-8 flex items-center justify-center rounded cursor-pointer transition-colors duration-300 
-              ${open ? 'bg-green-500 text-white' : 'bg-white text-[#767C9E]'}`}
-          >
-            <span className='text-[24px] pb-0 md:pb-[5px]' ref={iconRef}>+</span>
-          </button>
-        </div>
-
-        {/* Hidden content (stays white) */}
-        <div
-          id={`faq-content-${id}`}
-          ref={contentRef}
-          className="overflow-hidden text-white"
-          style={{ height: 0, opacity: 0, visibility: 'hidden' }}
-        >
-          <p className="mt-3 text-sm">{a1}</p>
-          <p className="mt-2 text-sm">{a2}</p>
-        </div>
-      </div>
+      <button
+        onClick={handleIconClick}
+        aria-expanded={open}
+        aria-controls={`faq-content-${id}`}
+        className={`w-7 h-7 md:w-8 md:h-8 flex items-center justify-center rounded cursor-pointer transition-colors duration-300 
+          ${open ? "bg-green-500 text-white" : "bg-white text-[#767C9E]"}`}
+      >
+        <span className="text-[24px] pb-0 md:pb-[5px]" ref={iconRef}>
+          +
+        </span>
+      </button>
     </div>
+
+    <div
+      id={`faq-content-${id}`}
+      ref={contentRef}
+      className="overflow-hidden text-white"
+      style={{ height: 0, opacity: 0, visibility: "hidden" }}
+    >
+      <p className="mt-3 text-sm">{a1}</p>
+      <p className="mt-2 text-sm">{a2}</p>
+    </div>
+  </div>
+</div>
+
   );
 }
 
@@ -302,10 +308,8 @@ const SectionSix = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full lg:min-h-[650px] bg-[#000C1B] section-six relative overflow-hidden">
-      <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10'>
-        <img src='/img/homepage/background-image.png' className='w-[1440px] mt-[120px]' />
-      </div>
+    <section ref={sectionRef} className="homepage-section-six w-full lg:min-h-[780px] bg-[#000C1B] section-six relative overflow-x-hidden">
+      <div className='w-full h-[83%] bg-[#000c1bf2] absolute bottom-0'></div>
       
       <div className='w-[0vw] h-[0vw] rounded-full absolute top-[100px] left-[-60px] opacity-[50%] blur-circle2'></div>
 
@@ -347,6 +351,11 @@ const SectionSix = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className='mt-[70px]'>
+        <div className='w-full h-[2px] absolute bg-gradient-to-r from-[#1AE4FA] to-[#FA1AC2]'></div>
+        <Footer transparent={true}/>
       </div>
     </section>
   );

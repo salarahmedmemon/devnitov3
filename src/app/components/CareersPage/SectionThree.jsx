@@ -54,7 +54,7 @@ const SectionThree = () => {
 
     return (
         <div ref={sectionRef} className="w-full bg-[#0A131C] p-5 md:p-20 relative overflow-hidden">
-            <div className="hidden lg:block absolute top-[10%] left-1/2 -translate-x-1/2 w-[86%] h-[75%] bg-gradient-to-r from-[#FA1AC2] via-[#11AAEE] to-[#11AAEE] p-[2px] rounded-[10px]">
+            <div className="hidden md:block absolute top-[10%] left-1/2 -translate-x-1/2 w-[90%] h-[84%] bg-gradient-to-r from-[#FA1AC2] via-[#11AAEE] to-[#11AAEE] p-[2px] rounded-[10px]">
                 <div className="w-full h-full bg-[#0A131C] rounded-[10px]"></div>
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute top-[-4%] right-[-4%] blur-[250px]"></div>
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute bottom-[-4%] left-[-4%] blur-[250px]"></div>
@@ -62,9 +62,9 @@ const SectionThree = () => {
             
             <div className="w-full h-full section-three-bgImage pt-2 sm:pt-4 md:pt-6">
 
-                <div className="relative section-three-title">
+                <div className="relative section-three-title mt-[20px] ld:mt-[50px]">
                     <div className="w-[59vw] sm:w-[40vw] md:w-[20vw] h-1 bg-[#71C1E6] absolute left-[15.7%] sm:left-[28.5%] md:left-[38.5%] top-[5vw] sm:top-[20%] md:top-[18%]"></div>
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl text-center pt-[24px] sm:pt-6 text-white">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl text-center pt-[40px] sm:pt-6 text-white">
                         See Our
                     </h1>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl text-center text-[#71C1E6] font-bold">
@@ -73,25 +73,23 @@ const SectionThree = () => {
                 </div>
 
 
-                <div className="relative w-full h-full mt-4 mb-[40px] sm:mt-6 md:mt-10 p-0 md:p-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10">
+                <div className="relative w-full mt-4 sm:mt-6 md:mt-10 p-0 md:p-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <img
                         src="/img/aboutpage/sectionthree/rightLogo.png"
-                        className="hidden md:block absolute top-[-42vw] sm:top-[-24vw] md:top-[-16vw] right-[-2.5vw] w-[15vw] sm:w-[10vw] md:w-[6vw]"
+                        className="absolute top-[-50%] right-[-4%]"
                     />
+                    
                     <img
                         src="/img/aboutpage/sectionthree/leftLogo.png"
-                        className="hidden md:block w-[15vw] sm:w-[10vw] md:w-[7.4vw] absolute bottom-[-2.3vw] left-[-2.8vw]"
+                        className="hidden md:block absolute bottom-[-5%] lg:bottom-[-10%] left-[-7%] lg:left-[-5%]"
                     />
 
                     {projects.map((project, index) => (
                         <div
                             key={index}
                             className="bg-gradient-to-br from-[#FA1AC2] via-[#11AAEE] to-[#1CDE63] 
-                            project-card group w-[100%] h-[240px] 
-                            sm:w-[40vw] md:w-[40vw]  
-                            sm:h-[50vw] sm:mt-6 
-                            md:h-[vw] gradient-border rounded-lg relative overflow-hidden
-                            lg:w-[100%] lg:h-[400px]  
+                            project-card group w-full h-[280px] sm:h-[400px] sm:mt-6
+                            gradient-border rounded-lg relative overflow-hidden  
                             p-[.8vw] sm:p-[.4vw] md:p-1 cursor-pointer"
                         >
 

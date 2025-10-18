@@ -18,30 +18,43 @@ const SectionOne = () => {
     const rightRef = useRef(null);
     const tl = useRef(null);
 
-    // MOBILE REFS
-    // const mImg1 = useRef(null);
-    // const mImg2 = useRef(null);
-    // const mContent = useRef(null);
-    // const mRight = useRef(null);
-
     useLayoutEffect(() => {
-        if (!loaded || !sectionRef.current) return;
+  if (!loaded || !sectionRef.current) return;
 
-        const ctx = gsap.context(() => {
-            if (window.innerWidth > 1280) {
-                tl.current = gsap.timeline({ paused: true });
-                tl.current.fromTo(imgRef1.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(imgRef2.current, { y: 100, x: -100, opacity: 0 }, { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(contentRef.current, { x: -150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-                tl.current.fromTo(rightRef.current, { x: 150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
+  const ctx = gsap.context(() => {
+    if (window.innerWidth > 1280) {
+      tl.current = gsap.timeline({ paused: false }); // play immediately (no mouse event)
+      
+      tl.current.fromTo(
+        imgRef1.current,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        imgRef2.current,
+        { y: 100, x: -100, opacity: 0 },
+        { y: 0, x: 0, duration: 1.4, opacity: 1, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        contentRef.current,
+        { x: -150, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        rightRef.current,
+        { x: 150, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+        0
+      );
+    }
+  }, sectionRef);
 
-                const handleEnter = () => { if (tl.current.paused()) tl.current.play(); };
-                sectionRef.current.addEventListener("mousemove", handleEnter);
-            }
-        }, sectionRef);
+  return () => ctx.revert();
+}, [loaded]);
 
-        return () => ctx.revert();
-    }, [loaded]);
 
 
     // 2. functions/methods
@@ -50,7 +63,7 @@ const SectionOne = () => {
     return (
         <div ref={sectionRef} className="w-full h-[472px] sm:h-[550px] md:h-[734px] pt-[9px] xl:pt-[43.34px] overflow-hidden">
             {/* LARGE SCREEN BACKGROUND IMAGE */}
-            <div className="w-full h-[472px] sm:h-[550px] md:h-[734px] absolute top-0 left-0">
+            <div className="w-full h-[472px] sm:h-[550px] md:h-[734px] absolute top-0 left-0 blur-[4px]">
                 <Image
                     src="/img/aboutpage/image.png"
                     alt="background image"
@@ -78,7 +91,7 @@ const SectionOne = () => {
                                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
                             />
                         </div> */}
-                        <img src="/img/aboutpage/image01.png" alt="image one"/>
+                        <img src="/img/aboutpage/image01.png" alt="image one" className="w-full h-full object-cover" />
 
                         {/* Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -98,7 +111,7 @@ const SectionOne = () => {
                                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
                             />
                         </div> */}
-                        <img src="/img/aboutpage/image02.png" alt="image two" />
+                        <img src="/img/aboutpage/image02.png" alt="image two" className="w-full h-full object-cover" />
 
                         {/* Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -150,7 +163,7 @@ const SectionOne = () => {
                     <p className="font-[300] text-[16px] pt-[36px] xl:w-[90%]">DevNito is a leading provider of IT export services, offering custom software and SaaS solutions to businesses worldwide. With a focus on tailored excellence, transparent collaboration, and client-centricity, we aim to elevate your business to new heights.</p>
                     <button className="w-[220px] h-[46px] bg-white mt-[32px] rounded-[5px] font-[600] text-[20px] text-[#4C4886] relative group">
                         CONTACT US
-                        <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-500 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
+                        <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-200 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
                     </button>
                 </div>
 
@@ -161,6 +174,10 @@ const SectionOne = () => {
                         <div className="w-full h-full rounded-[10px] z-2  border border-[#4AFFF0] shadow-[0_2px_7px_0_#5FFFE4] relative group overflow-hidden cursor-pointer">
 
                             {/* Image */}
+                            {/* <img src="/img/aboutpage/image01.png" 
+                              alt="About page image one"
+                              className="w-full h-full object-cover"
+                            /> */}
                             <div className="w-full h-full relative z-0">
                                 <Image
                                     src="/img/aboutpage/image01.png"

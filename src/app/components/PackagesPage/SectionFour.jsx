@@ -47,59 +47,63 @@ const SectionFour = () => {
     }, []);
 
     return (
-        <div className="w-full h-[93vh] sm:h-[80vh] md:min-h-screen bg-[#EEEEEE] relative overflow-hidden">
+        <div className="w-full h-[840px] md:h-[802px] bg-[#EEEEEE] relative overflow-hidden">
             {/* RIGHT CIRCLE */}
-            <div className='w-[140px] sm:w-[300px] lg:w-[405.06px] h-[140px] sm:h-[300px] lg:h-[405.06px] rounded-full bg-[#BAD3EF] absolute top-[-20px] right-[-60px] sm:top-[-50px] lg:top-[-140px] sm:right-[-150px] lg:right-[-200px] xl:left-[85%] p-[3px]'>
+            <div className='w-[180px] sm:w-[300px] lg:w-[405.06px] h-[180px] sm:h-[300px] lg:h-[405.06px] rounded-full bg-[#BAD3EF] absolute top-[-20px] right-[-60px] sm:top-[-50px] lg:top-[16px] sm:right-[-150px] lg:right-[-200px] xl:left-[85%] p-[3px]'>
                 <div className='w-full h-full rounded-full bg-gradient-to-b from-[#E2E8EE] to-[#E9EBEE]'></div>
             </div>
 
-            {/* LEFT CIRCLE */}
-            <div className='w-[185.26px] h-[185.26px] sm:w-[400px] sm:h-[400px] lg:w-[754px] lg:h-[754px] rounded-full bg-[#fff] absolute bottom-[-20px] left-[-40px] sm:bottom-[-30px] sm:left-[-160px] lg:bottom-[-200px] lg:left-[-160px] p-[3px]'>
-                <div className='w-full h-full rounded-full bg-gradient-to-b from-[#F2F3F5] to-[#F1F2F2]'></div>
+            {/* Left Circle */}
+            <div className="w-[96vw] h-[96vw] sm:w-[60vw] sm:h-[60vw] md:w-[45vw] md:h-[45vw] bg-white rounded-full absolute bottom-[-10vw] md:bottom-[-15vw] left-[-24vw] sm:left-[-20vw] md:left-[-10vw] p-1">
+                <div className="w-full h-full bg-[#EEEEEE] rounded-full"></div>
             </div>
 
             {/* TITLE */}
-            <div ref={titleRef} className="title relative text-center mb-10 opacity-0">
-                <div className="w-[50%] sm:w-[35vw] md:w-[22vw] h-[2px] bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl pt-[40px] sm:pt-6">
+            <div ref={titleRef} className="title relative text-center mt-[26px] mb-4 opacity-0">
+                <div className="w-[60vw] sm:w-[35vw] md:w-[26vw] h-[.8vw] sm:h-[.3vw] md:h-[.2vw] bg-[#4C4886] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl pt-8 sm:pt-6">
                     Ask For The Custom
                 </h1>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#4C4886] font-semibold">
-                    Service And Package
+                    Service And Packages
                 </h2>
             </div>
 
             {/* Form */}
             <form
                 ref={formRef}
-                className="form w-full md:w-[80vw] mx-auto flex items-center justify-center flex-wrap gap-4 p-4 opacity-0"
+                className="form w-full md:w-[80vw] mx-auto flex items-center justify-center flex-wrap gap-8 p-4 opacity-0 mt-[40px] md:mt-[100px]"
             >
                 <input
-                    className="w-full sm:w-[40vw] md:w-[28vw] h-[7vh] md:h-[9vh] rounded ps-4 border border-[#9d9797]"
+                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
                     placeholder="Enter Your Email:"
                     type="email"
                 />
                 <input
-                    className="w-full sm:w-[40vw] md:w-[28vw] h-[7vh] md:h-[9vh] rounded ps-4 border border-[#9d9797]"
-                    placeholder="Enter Your Phone No:"
+                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    placeholder="Enter Your Phone Number:"
                     type="number"
                 />
+                 
                 <input
-                    className="z-10 w-full sm:w-[40vw] md:w-[28vw] h-[7vh] md:h-[9vh] rounded ps-4 border border-[#9d9797]"
-                    placeholder="Enter Your Phone No:"
-                    type="number"
+                    className="z-10 w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    placeholder="Select Packages:"
+                    type="text"
                 />
+                
                 <input
-                    className="w-full sm:w-[40vw] md:w-[28vw] h-[7vh] md:h-[9vh] rounded ps-4 border border-[#9d9797]"
-                    placeholder="Date: 20/Sep/2025"
-                    type="date"
+                    className="w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    placeholder="Date 19/10/2025"
+                    type="text"
                 />
+                
                 <textarea
-                    className="z-10 w-full sm:w-[82.5vw] md:w-[57vw] h-[30vh] rounded ps-4 border border-[#9d9797]"
-                    placeholder="Enter Your Messages:"
+                    className="z-10 w-full md:w-[830px] h-[165px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    placeholder="Entered Your Messages:"
                 ></textarea>
-                <div className="z-10 w-full sm:w-[82.5vw] md:w-[57vw]">
-                    <button className="px-6 py-3 bg-[#4C4886] text-white rounded font-semibold">
+                
+                <div className="z-10 w-full md:w-[830px] flex items-start">
+                    <button className="w-full md:w-[180px] h-[50px] text-[22px] bg-[#4C4886] mb-[30px] text-white rounded-lg font-semibold">
                         Send Message
                     </button>
                 </div>

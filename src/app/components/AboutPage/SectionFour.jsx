@@ -45,11 +45,12 @@ const SectionFour = () => {
   };
 
   return (
-    <div className="bg-[url('/img/aboutpage/sectionfour/image.png')] bg-cover bg-center w-full h-[60vh] md:min-h-screen flex flex-col justify-center items-center px-4">
+    <div className="bg-[url('/img/aboutpage/sectionfour/bgImage.png')] bg-cover bg-center w-full h-[442.85px] relative flex flex-col justify-center items-center px-4">
+      
       {/* TITLE */}
       <div className="relative text-center mb-10">
-        <div className="w-[59vw] sm:w-[28vw] md:w-[16vw] h-[.2vw] sm:h-[.1vw] bg-[#71C1E6] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl text-white pt-4 sm:pt-6">
+        <div className="w-[50vw] sm:w-[28vw] md:w-[16vw] h-[.2vw] sm:h-[.1vw] bg-[#71C1E6] absolute left-1/2 -translate-x-1/2 top-[5vw] sm:top-[20%] md:top-[18%]"></div>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-white pt-8 sm:pt-6">
           Testimonials
         </h1>
         <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#71C1E6] font-semibold">

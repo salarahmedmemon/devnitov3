@@ -49,7 +49,7 @@ const SectionOne = () => {
                     <span className="animate-text font-[300] text-[16px] sm:text-[30px] md:text-[40px] lg:text-[36] xl:text-[56px] leading-[40px] sm:leading-[20px] xl:leading-[55px]">WITH</span>
                     <h2 className="animate-text font-[500] text-[16px] sm:text-[34px] md:text-[36px] lg:text-[32px] xl:text-[44px] leading-0 sm:leading-[60px] xl:leading-[55px]">GLOBAL AUDIENCES</h2>
                     <button className="animate-text w-[121px] h-[29px] sm:w-[240px] xl:w-[220px] sm:h-[46px] bg-white rounded-[5px] text-[#4C4886] font-[600] text-[12px] sm:text-[24px] xl:text-[20px] mt-[20px] sm:mt-[40px] xl:mt-[89px] relative group">Talk to our expert
-                        <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-500 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
+                        <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-200 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
                     </button>
                 </div>
 
@@ -57,165 +57,407 @@ const SectionOne = () => {
 
                     <div className="block lg:hidden w-[98%] h-full bg-gradient-to-b from-[#31365C]/40 to-[#0A131C]/40 absolute top-0 z-[90]"></div>
 
-                    {/* FIRST COLUMN */}
+                    {/* updated code */}
                     <div className='first-column w-[168.12px] absolute top-[-200px] overflow-hidden'>
-                        {/* BOX ONE */}
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 91%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-[#272D4B] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[280px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
                                 src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 91%)",
+                            }}
                             />
                         </div>
-                        {/* BOX TWO */}
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 85%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-[#272D4B] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[240px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww"
+                                src="/img/homepage/sectionone/image2.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 91%)",
+                            }}
                             />
                         </div>
-                        {/* BOX THREE */}
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1487338875411-8880f74114a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image5.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
+                            }}
                             />
                         </div>
+
+                        <div
+                            style={{
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
+                            }}
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
+                            <img
+                                src="/img/homepage/sectionone/image6.webp"
+                                alt="Shape Image"
+                                className="w-full h-full object-cover"
+                                style={{
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
+                            }}
+                            />
+                        </div>
+
                     </div>
-                    {/* SECOND COLUMN */}
+
+
                     <div className='second-column w-[168.12px] absolute top-[-200px] left-[230px] overflow-hidden'>
-                        {/* BOX ONE */}
+                        <div
+                          style={{
+                              clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 91%)",
+                          }}
+                          className="h-[280px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                          <div 
+                            style={{
+                              clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                            }}
+                            className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                          </div>
+                            
+                          <div 
+                            style={{
+                              clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                            }}
+                            className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                          </div>
+
+
+                          <img
+                              src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                              alt="Shape Image"
+                              className="w-full h-full object-cover"
+                              style={{
+                              clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 91%)",
+                          }}
+                          />
+                        </div>
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 85%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[240px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image6.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 91%)",
+                            }}
                             />
                         </div>
-                        {/* BOX TWO */}
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image3.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
+                            }}
                             />
                         </div>
-                        {/* BOX THREE */}
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image2.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
+                            }}
                             />
                         </div>
                     </div>
-                    {/* THIRD COLUMN */}
-                    <div className='hidden md:block third-column w-[168.12px] absolute top-[-200px] right-[10px] overflow-hidden'>
-                        {/* BOX ONE */}
-                        <div
+
+                    <div className='third-column hidden md:block w-[168.12px] absolute top-[-260px] right-[10px] overflow-hidden'>
+                       <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 88%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1569323112685-9c1410e5a0fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image3.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 92%)",
+                            }}
                             />
                         </div>
-                        {/* BOX TWO */}
-                        <div
+
+                       <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 16%, 100% 100%, 0 85%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[240px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1688733720228-4f7a18681c4f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image5.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 16%, 100% 100%, 0 88%)",
+                            }}
                             />
                         </div>
-                        {/* BOX THREE */}
+
                         <div
                             style={{
-                                clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 85%)",
                             }}
-                            className="w-full h-[341.97px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] p-[8px] ps-0 pb-0 overflow-hidden relative">
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute top-[-5px] left-[-4px] rotate-[50deg]'></div>
-                            <div className='w-[10px] h-[11px] bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] absolute bottom-[-6px] right-[-4px] rotate-[54deg]'></div>
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
                             <img
-                                src="https://images.unsplash.com/photo-1486486955648-a4f22566c598?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D"
+                                src="/img/homepage/sectionone/image2.webp"
                                 alt="Shape Image"
                                 className="w-full h-full object-cover"
                                 style={{
-                                    clipPath: "polygon(0 0, 100% 9%, 100% 100%, 0 91%)",
-                                }}
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 91%)",
+                            }}
+                            />
+                        </div>
+
+                        <div
+                            style={{
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 85%)",
+                            }}
+                            className="h-[320px] bg-gradient-to-b from-[#6DB7E5] to-[#6061AB] pt-[10px] pe-[10px] overflow-hidden relative">
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(0 0, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[14px] h-[14px] bg-[#272D4B] absolute top-0 left-0'>
+
+                            </div>
+                            
+                            <div 
+                              style={{
+                                clipPath: "polygon(100% 100%, 0% 100%, 100% 0)",
+                              }}
+                              className='z-[999] w-[11px] h-[16px] absolute bottom-0 right-0 bg-gradient-to-b from-[#31365C] to-[#0A131C] xl:bg-[#2A2A4A] '>
+
+                            </div>
+
+
+                            <img
+                                src="/img/homepage/sectionone/image2.webp"
+                                alt="Shape Image"
+                                className="w-full h-full object-cover"
+                                style={{
+                                clipPath: "polygon(0 0, 100% 10.6%, 100% 100%, 0 91%)",
+                            }}
                             />
                         </div>
                     </div>

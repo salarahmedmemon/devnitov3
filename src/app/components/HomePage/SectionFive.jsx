@@ -106,13 +106,13 @@ const SectionFive = () => {
                 {counters.map((c) => (
                     <div
                         key={c.id}
-                        className="relative p-[1px] bg-gradient-to-b from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9] w-[100px] h-[70px] sm:w-[140px] sm:h-[70px] xl:w-[171px] xl:h-[97px] backdrop-blur-[34.2px] rounded-[10px]"
+                        className="relative p-[1.2px] bg-gradient-to-b from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9] w-[100px] h-[70px] sm:w-[140px] sm:h-[70px] xl:w-[171px] xl:h-[97px] backdrop-blur-[34.2px] rounded-[10px]"
                     >
-                        <div className="bg-[#0A1119] text-white w-[100%] h-[100%] flex flex-col items-center justify-center rounded-[10px]">
+                        <div className="bg-[#0A1119] text-white w-[100%] h-[100%] ps-[16px] lg:ps-[26px] flex flex-col items-start justify-center rounded-[10px]">
                             <span className="text-[12px] md:text-[16px]">{c.label}</span>
                             <span
                                 ref={(el) => (counterRefs.current[c.id] = el)}
-                                className="font-[600] text-[20px] md:text-[24px]"
+                                className="font-[600] text-[20px] md:text-[32px]"
                                 aria-live="polite"
                             >
                                 {c.decimals
@@ -125,8 +125,8 @@ const SectionFive = () => {
                 ))}
 
                 {/* Example progress bar for ETH item (optional visual) */}
-                <div className="relative p-[1px] bg-gradient-to-b from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9] w-[100px] h-[70px] sm:w-[140px] sm:h-[70px] xl:w-[171px] xl:h-[97px] rounded-[10px]">
-                    <div className="bg-[#0A1119] w-[100%] h-[100%] text-white flex flex-col items-center justify-center gap-0 rounded-[10px]">
+                <div className="relative p-[1.2px] bg-gradient-to-b from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9] w-[100px] h-[70px] sm:w-[140px] sm:h-[70px] xl:w-[171px] xl:h-[97px] rounded-[10px]">
+                    <div className="bg-[#0A1119] w-[100%] h-[100%] text-white ps-[26px] flex flex-col items-start justify-center gap-0 rounded-[10px]">
                         <span className="text-[12px] md:text-[16px]">3.5 ETH</span>
                         <img
                             src="/img/homepage/network.png"

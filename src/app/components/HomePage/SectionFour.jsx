@@ -65,7 +65,7 @@ export const SectionFour = () => {
 
     // 3. return statement/jsx
     return (
-        <div ref={containerRef} className="w-full h-[380px] sm:h-[640px] lg:h-[660px] bg-[#EEEEEE] overflow-hidden relative">
+        <div ref={containerRef} className="w-full h-[380px] sm:h-[640px] lg:h-[660px] xl:h-[621px] bg-[#EEEEEE] overflow-hidden relative">
             {/* RIGHT CIRCLE */}
             <div className='w-[140px] h-[140px] sm:w-[405.05px] sm:h-[405.05px] rounded-full bg-[#B7D2EF] absolute top-[-40px] right-[-40px] sm:top-[-140px] sm:right-[-180px] xl:right-[-10%] p-[2px]'>
                 <div className='w-full h-full bg-gradient-to-b from-[#E7EBEE] to-[#EAECEE] rounded-full'></div>
@@ -90,51 +90,75 @@ export const SectionFour = () => {
                         <div className="flex h-full items-center gap-5 w-max animate-slide">
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/accor.png' alt='image one' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/accor.png' alt='image one' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/naugespa.png' alt='image two'/>                                
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image two'/>
+                                </div>                                
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/jb.png' alt='image three' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/jb.png' alt='image three' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/medisan.png' alt='image three' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image three' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/ghol.png' alt='image four' />
+                                <div className='w-[112px] h-[83px] flex items-center justify-center'>
+                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image four' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/crosstex.png' alt='image five' />
+                                <div className='w-[112px] h-[83px] flex items-center justify-center'>
+                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image five' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/accor.png' alt='image six' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/accor.png' alt='image six' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/naugespa.png' alt='image seven' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image seven' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/jb.png' alt='image eight' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/jb.png' alt='image eight' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/medisan.png' alt='image nine' />
+                                <div className='w-[112px] h-[83px]'>
+                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image nine' />
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/ghol.png' alt='image ten'/>
+                                <div className='w-[112px] h-[83px] flex items-center justify-center'>
+                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image ten'/>
+                                </div>
                             </div>
 
                             <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
-                                <img src='/img/homepage/sectionfour/crosstex.png' alt='image eleven'/>
+                                <div className='w-[112px] h-[83px] flex items-center justify-center'>
+                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image eleven'/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -145,7 +169,7 @@ export const SectionFour = () => {
             {/* BUTTON */}
             <div className='flex justify-center'>
                 <button className='w-[91px] h-[33px] sm:w-[220px] sm:h-[46px] rounded-[4px] sm:rounded-[5px] bg-[#4C4886] font-[500] sm:mt-[30px] text-[14px] sm:text-[20px] text-[#fff] relative group'>Read More
-                    <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-500 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
+                    <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-300 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
                 </button>
             </div>
         </div>

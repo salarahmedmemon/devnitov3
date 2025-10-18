@@ -56,7 +56,7 @@ const SectionTwo = () => {
     // 3. return statement/jsx
     return (
         <div ref={sectionRef}
-            className="w-full h-[1100px] sm:min-h-screen lg:h-[731px] bg-[#EEEEEE] pt-10 overflow-hidden relative"
+            className="w-full h-[782px] bg-[#EEEEEE] pt-10 overflow-hidden relative"
         >
            {/* RIGHT CIRCLE */}
             <div className='w-[140px] sm:w-[300px] lg:w-[405.06px] h-[140px] sm:h-[300px] lg:h-[405.06px] rounded-full bg-[#BAD3EF] absolute top-[-20px] right-[-60px] sm:top-[-50px] lg:top-[-140px] sm:right-[-150px] lg:right-[-200px] xl:left-[85%] p-[3px]'>
@@ -68,7 +68,7 @@ const SectionTwo = () => {
             </div>
 
             {/* Heading */}
-            <div ref={headingRef} className="h-[10vh] relative z-[50] mx-auto">
+            <div ref={headingRef} className="relative z-[50] mx-auto">
                 <div className="w-[60%] sm:w-[40%] md:w-[24%] mx-auto border-t-4 border-[#4C4886]">
                     <h1 className="text-[6vw] sm:text-[4vw] md:text-[2.4vw] text-center">
                         Services We Offering
@@ -80,7 +80,7 @@ const SectionTwo = () => {
             </div>
 
             {/* Main content */}
-            <div className="w-full mt-2 sm:mt-10 md:mt-20 flex flex-col md:flex-row items-center">
+            <div className="w-full mt-[60px] flex flex-col md:flex-row items-center">
                 {/* Left image */}
                 <div ref={imageRef}
                     className="z-10 w-full md:w-[40%] h-full flex items-center justify-center">

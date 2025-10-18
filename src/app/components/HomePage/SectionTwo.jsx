@@ -659,7 +659,8 @@ const SectionTwo = () => {
 
                 {/* FIRST COLUMN FOR IMAGES IN JUST FOR LARGE DEVICES */}
                 <div className="hidden lg:block w-[600px] lg:w-[350px] xl:w-[550px] h-[400px] lg:h-[240px] xl:h-[344px] z-[1000]">
-                    <div className='w-full h-full relative'>
+                    <img ref={imageRef} src={image} alt='image' className='w-full h-full object-contain' />
+                    {/* <div className='w-full h-full relative'>
                         <Image
                             ref={imageRef}
                             src={image}
@@ -670,7 +671,7 @@ const SectionTwo = () => {
                             blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA=="
 
                         />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* SECOND COLUMN FOR CONTENT */}

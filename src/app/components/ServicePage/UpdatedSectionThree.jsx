@@ -3,17 +3,39 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ServiceBox = ({ fname, sname, pos, image, setActiveImage }) => {
+const ServiceBox = ({ fname, sname, pos, image, isActive, onHover }) => {
     return (
         <div
             className={`w-[92px] h-[86px] lg:w-[200px] lg:h-[134px] absolute ${pos} flex flex-col items-center justify-between cursor-pointer`}
-            onMouseEnter={() => setActiveImage(image)}
+            onMouseEnter={onHover}
         >
-            <div className="w-[47px] h-[44px] lg:w-[70px] lg:h-[70px] rounded-[10px] border border-[#75BAFF] shadow-[0_0_4px_0_#0080FF] flex items-center justify-center">
-                <div className="w-[16px] h-[16px] lg:w-[27px] lg:h-[27px] rounded-full bg-[#75BAFF] shadow-[0_0_4px_0_#0080FF]"></div>
+            {/* Outer Box */}
+            <div
+                className={`w-[47px] h-[44px] lg:w-[70px] lg:h-[70px] rounded-[10px] border flex items-center justify-center transition-all duration-300
+                ${
+                    isActive
+                        ? "border-[#75BAFF] shadow-[0_0_4px_0_#0080FF]"
+                        : "border-[#75baff9b] opacity-60"
+                }`}
+            >
+                {/* Inner Circle */}
+                <div
+                    className={`w-[16px] h-[16px] lg:w-[27px] lg:h-[27px] rounded-full transition-all duration-300
+                    ${
+                        isActive
+                            ? "bg-[#75BAFF] shadow-[0_0_4px_0_#0080FF]"
+                            : "bg-[#75baff9b] opacity-60"
+                    }`}
+                ></div>
             </div>
-            <div className="w-[200px] h-[54px] text-[12px] lg:text-[20px] font-[600] text-[#75BAFF] flex flex-col items-center justify-center text-center">
-                <span>{fname}</span> <span>{sname}</span>
+
+            {/* Text */}
+            <div
+                className={`w-[200px] h-[54px] text-[12px] lg:text-[20px] font-[600] flex flex-col items-center justify-center text-center transition-all duration-300
+                ${isActive ? "text-[#75BAFF]" : "text-[#75baff9b] opacity-70"}`}
+            >
+                <span>{fname}</span>
+                <span>{sname}</span>
             </div>
         </div>
     );
@@ -23,6 +45,7 @@ const UpdatedSectionThree = () => {
     const [activeImage, setActiveImage] = useState(
         "/img/servicepage/sectionthree/mobileapp.png"
     );
+    const [activeBox, setActiveBox] = useState("Mobile App Development");
 
     const serviceImages = {
         "Mobile App Development": "/img/servicepage/sectionthree/mobileapp.png",
@@ -42,7 +65,7 @@ const UpdatedSectionThree = () => {
                 {/* WHITE SHADOW BEHIND IMAGE */}
                 <div className="w-[220px] h-[476px] lg:w-[340px] lg:h-[660px] absolute bottom-[-80px] lg:bottom-[-10px] left-1/2 -translate-x-1/2 z-5 rounded-[40px] shadow-[0_0_80px_30px_rgba(255,255,255,0.35)]"></div>
 
-                {/* IMAGE FRAME WITH ANIMATION (NO BORDER) */}
+                {/* IMAGE FRAME */}
                 <div className="w-[210px] h-[476px] lg:w-[340px] lg:h-[660px] absolute bottom-[-80px] lg:bottom-0 left-1/2 -translate-x-1/2 z-10 overflow-hidden rounded-[30px]">
                     <AnimatePresence mode="wait">
                         <motion.img
@@ -70,71 +93,107 @@ const UpdatedSectionThree = () => {
                     sname="App Development"
                     pos="top-[-120px] lg:top-[120px] left-1/2 -translate-x-1/2"
                     image={serviceImages["Mobile App Development"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Mobile App Development"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Mobile App Development"]);
+                        setActiveBox("Mobile App Development");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="IT"
                     sname="Resource"
                     pos="top-[-60px] left-[-40px] lg:top-[60px] lg:left-[90px]"
                     image={serviceImages["IT Resource"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "IT Resource"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["IT Resource"]);
+                        setActiveBox("IT Resource");
+                    }}
                 />
-            
+
                 <ServiceBox
                     fname="UI/UX"
                     sname="Design"
                     pos="top-[-60px] right-[-40px] lg:top-[60px] lg:right-[90px]"
                     image={serviceImages["UI/UX Design"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "UI/UX Design"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["UI/UX Design"]);
+                        setActiveBox("UI/UX Design");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="E-Commerce"
                     sname="Web Development"
                     pos="top-[120px] lg:top-[240px] left-[-40px]"
                     image={serviceImages["E-Commerce Web Development"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "E-Commerce Web Development"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["E-Commerce Web Development"]);
+                        setActiveBox("E-Commerce Web Development");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="Emerging"
                     sname="Tech Development"
                     pos="top-[120px] xl:top-[240px] right-[-40px]"
                     image={serviceImages["Emerging Tech Development"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Emerging Tech Development"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Emerging Tech Development"]);
+                        setActiveBox("Emerging Tech Development");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="Digital Branding &"
                     sname="Communication"
                     pos="top-[300px] lg:top-[500px] left-[-40px]"
                     image={serviceImages["Digital Branding & Communication"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Digital Branding & Communication"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Digital Branding & Communication"]);
+                        setActiveBox("Digital Branding & Communication");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="Website"
                     sname="Development"
                     pos="top-[300px] xl:top-[500px] right-[-40px]"
                     image={serviceImages["Website Development"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Website Development"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Website Development"]);
+                        setActiveBox("Website Development");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="Video"
                     sname="Animation"
                     pos="top-[500px] left-[0px] lg:top-[700px] lg:left-[90px]"
                     image={serviceImages["Video Animation"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Video Animation"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Video Animation"]);
+                        setActiveBox("Video Animation");
+                    }}
                 />
-                
+
                 <ServiceBox
                     fname="Digital"
                     sname="Branding"
                     pos="top-[500px] right-[0px] lg:top-[700px] lg:right-[90px]"
                     image={serviceImages["Digital Branding"]}
-                    setActiveImage={setActiveImage}
+                    isActive={activeBox === "Digital Branding"}
+                    onHover={() => {
+                        setActiveImage(serviceImages["Digital Branding"]);
+                        setActiveBox("Digital Branding");
+                    }}
                 />
             </div>
         </div>

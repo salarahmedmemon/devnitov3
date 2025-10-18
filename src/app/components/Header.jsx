@@ -137,8 +137,9 @@ const Header = () => {
       </div>
 
       {/* DESKTOP LOGO */}
-      <div className="hidden sm:block">
-        <img className="cursor-pointer" src="/img/homepage/desktop_logo.png" alt="Logo" />
+      <div className="hidden sm:flex w-[174px] cursor-pointer items-center justify-between">
+        <img src="/img/homepage/desktop-logo/icon.svg" />
+        <img src="/img/homepage/desktop-logo/heading.svg" />
       </div>
 
       {/* DESKTOP NAVIGATIONS */}

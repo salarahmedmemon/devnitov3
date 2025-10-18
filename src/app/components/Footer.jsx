@@ -7,7 +7,7 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
+const Footer = ({ transparent = false }) => {
   // 1. states/hook variables
   const footerRef = useRef(null);
   const iconRefs = useRef([]);
@@ -40,8 +40,19 @@ const Footer = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="w-full bg-gradient-to-r from-[#1AE4FA] to-[#FA1AC2] pt-[3px] relative">
-      <div className="w-full h-full bg-[#000C1B] py-1">
+    <div
+      ref={footerRef}
+      className={`w-full pt-[3px] relative ${
+        transparent
+          ? "bg-transparent"
+          : "bg-gradient-to-r from-[#1AE4FA] to-[#FA1AC2]"
+      }`}
+    >
+      <div
+    className={`w-full h-full ${
+      transparent ? "bg-transparent" : "bg-[#000C1B]"
+    } py-1`}
+  >
       <div className='w-[0vw] h-[0vw] rounded-full absolute top-[5%] left-[-16%] lg:top-[30%] lg:left-[0%] opacity-[24%] lg:opacity-[30%] blur-circle blur-animation'></div>
       <div className='w-[0vw] h-[0vw] rounded-full absolute top-[40%] right-0 lg:top-[-5%] lg:right-[0%] opacity-[10%] lg:opacity-[30%] right-blur-circle'></div>
     

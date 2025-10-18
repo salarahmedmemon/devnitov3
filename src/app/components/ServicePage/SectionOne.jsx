@@ -25,23 +25,42 @@ const SectionOne = () => {
   // const mRight = useRef(null);
 
   useLayoutEffect(() => {
-    if (!loaded || !sectionRef.current) return;
+  if (!loaded || !sectionRef.current) return;
 
-    const ctx = gsap.context(() => {
-      if (window.innerWidth > 1280) {
-        tl.current = gsap.timeline({ paused: true });
-        tl.current.fromTo(imgRef1.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(imgRef2.current, { y: 100, x: -100, opacity: 0 }, { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(contentRef.current, { x: -150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(rightRef.current, { x: 150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
+  const ctx = gsap.context(() => {
+    if (window.innerWidth > 1280) {
+      tl.current = gsap.timeline({ paused: false }); // play immediately
 
-        const handleEnter = () => { if (tl.current.paused()) tl.current.play(); };
-        sectionRef.current.addEventListener("mousemove", handleEnter);
-      }
-    }, sectionRef);
+      tl.current.fromTo(
+        imgRef1.current,
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        imgRef2.current,
+        { y: 100, x: -100, opacity: 0 },
+        { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        contentRef.current,
+        { x: -150, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        0
+      );
+      tl.current.fromTo(
+        rightRef.current,
+        { x: 150, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        0
+      );
+    }
+  }, sectionRef);
 
-    return () => ctx.revert();
-  }, [loaded]);
+  return () => ctx.revert();
+}, [loaded]);
+
 
   // 2. functions/methods
 
@@ -49,10 +68,23 @@ const SectionOne = () => {
   return (
     <div ref={sectionRef} className="w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] pt-[14px] lg:pt-[36px]">
 
-      <div className="w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0 bg-[#04080B]">
-        <div className="w-full h-full opacity-15">
+      <div className="hidden md:block w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0 bg-[#04080B]">
+        <div className="w-full h-full opacity-24">
           <Image
             src="/img/servicepage/image.png"
+            alt="background image"
+            fill
+            placeholder="blur"
+            className="object-cover"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA..."
+          />
+        </div>
+      </div>
+
+      <div className="block md:hidden w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0 bg-[#04080B]">
+        <div className="w-full h-full opacity-15">
+          <Image
+            src="/img/aboutpage/image.png"
             alt="background image"
             fill
             placeholder="blur"
@@ -120,7 +152,7 @@ const SectionOne = () => {
               by this principle every day.
             </p>
             <button className="w-[208px] h-[46px] bg-white text-[#4C4886] font-[600] rounded-[5px] mt-[35px] relative group">VIEW ALL SERVICES
-              <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-500 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
+              <span className="absolute left-1/2 -bottom-[2px] h-[3px] w-0 group-hover:w-full transition-all duration-200 ease-out -translate-x-1/2 bg-gradient-to-r from-[#1CDE63] via-[#FA1AC2] to-[#1AE4FA]"></span>
             </button>
 
           </div>

@@ -12,7 +12,7 @@ const SectionFour = () => {
     const barsRef = useRef([]);
 
     useEffect(() => {
-        // Content div (from left)
+        // LEFT CONTENT ANIMATION
         gsap.fromTo(
             contentRef.current,
             { x: -200, opacity: 0 },
@@ -24,11 +24,12 @@ const SectionFour = () => {
                 scrollTrigger: {
                     trigger: contentRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none none",
                 },
             }
         );
 
-        // Image div (from right)
+        // RIGHT IMAGE ANIMATION
         gsap.fromTo(
             imageRef.current,
             { x: 200, opacity: 0 },
@@ -40,11 +41,12 @@ const SectionFour = () => {
                 scrollTrigger: {
                     trigger: imageRef.current,
                     start: "top 80%",
+                    toggleActions: "play none none none",
                 },
             }
         );
 
-        // Progress bars animation
+        // PROGRESS BAR ANIMATIONS
         barsRef.current.forEach((bar) => {
             const finalWidth = bar.getAttribute("data-width");
 
@@ -66,8 +68,8 @@ const SectionFour = () => {
     }, []);
 
     return (
-        <div className="w-full lg-[300px] xl:h-[788px] flex flex-col-reverse md:flex-row items-center justify-center bg-[#EEEEEE] relative overflow-hidden">
-            {/* Background circles */}
+        <div className="w-full h-[788px] flex flex-col-reverse md:flex-row items-center justify-center bg-[#EEEEEE] relative overflow-hidden">
+            {/* Background Circles */}
             <div className="flex w-[30vw] h-[30vw] rounded-full p-[2px] bg-[#BFD6EF] absolute top-[-12vw] right-[-12vw] items-center justify-center">
                 <div className="w-full h-full bg-[#E8EBEE] rounded-full"></div>
             </div>
@@ -75,10 +77,10 @@ const SectionFour = () => {
                 <div className="w-full h-full bg-[#E8EBEE] rounded-full"></div>
             </div>
 
-            {/* Left Content */}
+            {/* LEFT CONTENT */}
             <div
                 ref={contentRef}
-                className="z-1000 w-[100%] sm:w-[75%] md:w-[60%] h-[53vh] sm:h-[65vh] md:h-[100vh] pt-0 p-4 sm:pt-6 md:p-20 text-center md:text-start"
+                className="z-[1000] w-full md:w-[60%] h-full pt-0 p-4 sm:pt-6 md:p-20 text-center md:text-start md:pt-[160px]"
             >
                 <h3 className="text-[4.5vw] sm:text-[3vw] md:text-lg">About Our Services</h3>
                 <h1 className="text-[#4C4886] text-[5vw] sm:text-[4vw] md:text-[2.6vw] font-semibold">
@@ -90,72 +92,52 @@ const SectionFour = () => {
                     over since the 1500s.
                 </p>
 
-               
-                <div className="w-[100%] md:w-[35vw] mt-[3vw] sm:mt-[2vw] mx-auto md:mx-0">
-                    <div className="flex items-center justify-between">
-                        <span>consulting</span>
-                        <span>90%</span>
+                {/* Progress Bars */}
+                {[
+                    { title: "consulting", width: "90%" },
+                    { title: "cloud solution", width: "75%" },
+                    { title: "it service", width: "100%" },
+                ].map((item, index) => (
+                    <div
+                        key={index}
+                        className={`w-full md:w-[35vw] ${
+                            index === 0 ? "mt-[3vw]" : "mt-[1vw]"
+                        } mx-auto md:mx-0`}
+                    >
+                        <div className="flex items-center justify-between">
+                            <span>{item.title}</span>
+                            <span>{item.width}</span>
+                        </div>
+                        <div className="w-full h-[10px] bg-[#AAAAAA] mt-2 rounded-full overflow-hidden">
+                            <div
+                                ref={(el) => (barsRef.current[index] = el)}
+                                data-width={item.width}
+                                className="h-full bg-[#4C4886] rounded-full"
+                            ></div>
+                        </div>
                     </div>
-                    <div className="w-[100%] h-[2vh] bg-[#AAAAAA] mt-2 rounded-full overflow-hidden">
-                        <div
-                            ref={(el) => (barsRef.current[0] = el)}
-                            data-width="90%"
-                            className="h-full bg-[#4C4886] rounded-full"
-                        ></div>
-                    </div>
-                </div>
+                ))}
 
-              
-                <div className="w-[100%] md:w-[35vw] mt-[1vw] mx-auto md:mx-0">
-                    <div className="flex items-center justify-between">
-                        <span>cloud solution</span>
-                        <span>75%</span>
-                    </div>
-                    <div className="w-[100%] h-[2vh] bg-[#AAAAAA] mt-2 rounded-full overflow-hidden">
-                        <div
-                            ref={(el) => (barsRef.current[1] = el)}
-                            data-width="75%"
-                            className="h-full bg-[#4C4886] rounded-full"
-                        ></div>
-                    </div>
-                </div>
-
-               
-                <div className="w-[100%] md:w-[35vw] mt-[1vw] mx-auto md:mx-0">
-                    <div className="flex items-center justify-between">
-                        <span>it service</span>
-                        <span>100%</span>
-                    </div>
-                    <div className="w-[100%] h-[2vh] bg-[#AAAAAA] mt-2 rounded-full overflow-hidden">
-                        <div
-                            ref={(el) => (barsRef.current[2] = el)}
-                            data-width="100%"
-                            className="h-full bg-[#4C4886] rounded-full"
-                        ></div>
-                    </div>
-                </div>
-
-                <button className="bg-[#4C4886] text-white mt-10 w-[100%] md:w-[40%] px-5 py-[.6vw] rounded">
+                <button className="bg-[#4C4886] text-white mt-10 w-[100%] text-[20px] md:w-[30%] px-5 py-[.6vw] rounded-lg">
                     learn more
                 </button>
             </div>
 
-            {/* Right Content (Image with Overlay) */}
+            {/* RIGHT CONTENT (Image) */}
             <div
                 ref={imageRef}
-                className="z-1000 w-[100%] md:w-[40%] h-[30vh] md:h-[100vh] flex items-center justify-center"
+                className="z-1000 w-full md:w-[40%] h-[30vh] md:h-[100vh] flex items-center justify-center"
             >
-                <div className="w-[70%] sm:w-[40%] md:w-[70%] relative rounded-lg overflow-hidden group">
+                <div className="w-[400px] h-[400px] relative rounded-lg overflow-hidden group">
                     <img
                         src="/img/servicepage/sectionfour/image.png"
                         className="w-full h-full rounded-lg object-cover"
                         alt="Service"
                     />
-                 
-                    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center 
+                    <div className="absolute inset-0 bg-[#0a131c9b] flex items-center justify-center 
                                     opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <span className="text-white text-xl sm:text-2xl font-semibold">
-                            Web Developer
+                        <span className="text-[#11AAEE] text-xl sm:text-2xl font-semibold">
+                            Video Animation
                         </span>
                     </div>
                 </div>

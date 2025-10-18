@@ -8,7 +8,7 @@ import { LoadContext } from "../ClientWrapper";
 
 const SectionOne = () => {
   // 1. states/hook variables
-  const { loaded } = useContext(LoadContext);
+    const { loaded } = useContext(LoadContext);
   const sectionRef = useRef(null);
 
   // LARGE SCREEN REFS
@@ -18,25 +18,46 @@ const SectionOne = () => {
   const rightRef = useRef(null);
   const tl = useRef(null);
 
-  // MOBILE REFS
-  // const mImg1 = useRef(null);
-  // const mImg2 = useRef(null);
-  // const mContent = useRef(null);
-  // const mRight = useRef(null);
-
   useLayoutEffect(() => {
-    if (!loaded || !sectionRef.current) return;
+    // Guard clause
+    if (!sectionRef.current || (typeof loaded !== "undefined" && !loaded)) return;
 
     const ctx = gsap.context(() => {
       if (window.innerWidth > 1280) {
+        // Create timeline
         tl.current = gsap.timeline({ paused: true });
-        tl.current.fromTo(imgRef1.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(imgRef2.current, { y: 100, x: -100, opacity: 0 }, { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(contentRef.current, { x: -150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
-        tl.current.fromTo(rightRef.current, { x: 150, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0);
 
-        const handleEnter = () => { if (tl.current.paused()) tl.current.play(); };
-        sectionRef.current.addEventListener("mousemove", handleEnter);
+        tl.current.fromTo(
+          imgRef1.current,
+          { y: -100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          imgRef2.current,
+          { y: 100, x: -100, opacity: 0 },
+          { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          contentRef.current,
+          { x: -150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          rightRef.current,
+          { x: 150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+
+        // Auto play after short delay
+        const delay = setTimeout(() => {
+          tl.current.play();
+        }, 300);
+
+        return () => clearTimeout(delay);
       }
     }, sectionRef);
 

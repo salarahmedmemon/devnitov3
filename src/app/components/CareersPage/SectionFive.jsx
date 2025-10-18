@@ -54,7 +54,7 @@ const SectionThree = () => {
 
     return (
         <div ref={sectionRef} className="w-full bg-[#0A131C] p-5 md:p-20 relative overflow-hidden">
-            <div className="hidden lg:block absolute top-[10%] left-1/2 -translate-x-1/2 w-[86%] h-[75%] bg-gradient-to-r from-[#FA1AC2] via-[#11AAEE] to-[#11AAEE] p-[2px] rounded-[10px]">
+            <div className="hidden lg:block absolute top-[10%] left-1/2 -translate-x-1/2 w-[90%] h-[80%] bg-gradient-to-r from-[#FA1AC2] via-[#11AAEE] to-[#11AAEE] p-[2px] rounded-[10px]">
                 <div className="w-full h-full bg-[#0A131C] rounded-[10px]"></div>
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute top-[-4%] right-[-4%] blur-[250px]"></div>
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute bottom-[-4%] left-[-4%] blur-[250px]"></div>
@@ -76,11 +76,11 @@ const SectionThree = () => {
                 <div className="relative w-full h-full mt-4 mb-[40px] sm:mt-6 md:mt-10 p-0 md:p-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10">
                     <img
                         src="/img/aboutpage/sectionthree/rightLogo.png"
-                        className="hidden md:block absolute top-[-42vw] sm:top-[-24vw] md:top-[-16vw] right-[-2.5vw] w-[15vw] sm:w-[10vw] md:w-[6vw]"
+                        className="hidden md:block absolute top-[-214px] right-[-44px]"
                     />
                     <img
                         src="/img/aboutpage/sectionthree/leftLogo.png"
-                        className="hidden md:block w-[15vw] sm:w-[10vw] md:w-[7.4vw] absolute bottom-[-2.3vw] left-[-2.8vw]"
+                        className="hidden md:block absolute bottom-[-80px] left-[-40px]"
                     />
 
                     {projects.map((project, index) => (

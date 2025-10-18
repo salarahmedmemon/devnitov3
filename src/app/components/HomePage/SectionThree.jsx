@@ -111,16 +111,13 @@ useEffect(() => {
 
 
     return (
-        <div ref={containerRef} className="projects w-full h-[465px] sm:h-[790px] lg:h-[900px] xl:h-[900px] relative bg-[#0A131C] pt-[15px] sm:pt-[20px] lg:pt-[58px] overflow-hidden">
+        <div ref={containerRef} className="projects w-full h-[465px] sm:h-[790px] lg:h-[980px] relative bg-[#0A131C] pt-[15px] sm:pt-[20px] lg:pt-[58px] overflow-hidden">
             {/* Background image (sharp outside, blurred inside glass) */}
             {/* RIGHT LOGO */}
-            <div className="hidden right-image w-[55.8px] h-[72.3px] absolute right-[3%] lg:right-[5%] top-[1%] lg:top-[2%] xl:top-[5%] rotate-[50deg]">
-                <img src="/img/aboutpage/sectionthree/rightlogo.png" />
-            </div>
+            <img src="/img/aboutpage/sectionthree/rightlogo.png" className='block w-[60px] lg:w-[144px] absolute top-[14px] lg:top-[40px] left-[85%] rotate-[50deg]' />
             {/* LEFT LOGO */}
-            <div className="hidden left-image absolute left-[3%] bottom-0 lg:bottom-[1%] xl:bottom-[2%] rotate-x-[-140deg] rotate-[-80deg]">
-                <img src="/img/aboutpage/sectionthree/leftlogo.png" />
-            </div>
+            <img src="/img/aboutpage/sectionthree/leftlogo.png" className='block w-[80px] lg:w-[144px] absolute bottom-[0px] lg:bottom-[54px] left-[2%] lg:left-[4%] rotate-y-[140deg] rotate-[100deg]' />
+
 
             {/* Main glass box */}
             <div className="main-glass w-[403px] sm:w-[88%] mx-auto h-[425px] sm:h-[740px] lg:h-[800px] xl:h-[800px] rounded-[5px] xl:rounded-[26px] border-[1.4px] xl:border border-[#4279E8]/40
