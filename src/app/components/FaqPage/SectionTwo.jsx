@@ -56,7 +56,7 @@ const SectionTwo = () => {
     // 3. return statement/jsx
     return (
         <div ref={sectionRef}
-            className="w-full h-[1100px] md:h-[700px] bg-[#EEEEEE] pt-10 overflow-hidden relative"
+            className="w-full h-[940px] md:h-[700px] bg-[#EEEEEE] pt-10 overflow-hidden relative"
         >
            {/* RIGHT CIRCLE */}
             <div className='w-[140px] sm:w-[300px] lg:w-[405.06px] h-[140px] sm:h-[300px] lg:h-[405.06px] rounded-full bg-[#BAD3EF] absolute top-[-20px] right-[-60px] sm:top-[-50px] lg:top-[-140px] sm:right-[-150px] lg:right-[-200px] xl:left-[85%] p-[3px]'>

@@ -72,7 +72,7 @@ const SectionThree = () => {
   }, []);
 
   return (
-    <div className="w-full h-[480px] md:h-[740px] bg-[#0A131C]">
+    <div className="w-full h-[400px] md:h-[740px] bg-[#0A131C]">
       {/* Header */}
       <h1 ref={leftRef} className="text-[#4C4886] pt-[6vw] text-center font-semibold text-[4vw] md:text-[2vw]">
         A Frequently Asked Question
@@ -90,7 +90,7 @@ const SectionThree = () => {
         />
         <img
           src="/img/faqpage/image04.png"
-          className="absolute top-[4vw] md:top-[2.3vw] left-[1.5vw] md:left-[1vw] w-[2vw] md:w-[1.5vw]"
+          className="absolute top-[4.8vw] md:top-[2.3vw] left-[1.5vw] md:left-[1vw] w-[2vw] md:w-[1.5vw]"
         />
       </div>
 

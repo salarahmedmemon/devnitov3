@@ -167,14 +167,9 @@ function FAQItem({ q, a1, a2, id }) {
   return (
    <div
   ref={wrapperRef}
-  className="relative w-full sm:w-[45%] lg:w-[90%] lg:mx-auto mt-[2vw] rounded-lg p-[2px] bg-gradient-to-r from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9]"
-  style={{
-    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-    WebkitMaskComposite: "xor",
-    maskComposite: "exclude",
-  }}
+  className="relative sextion-six-homepage w-full sm:w-[45%] lg:w-[90%] lg:mx-auto mt-[2vw] rounded-lg p-[2px] bg-gradient-to-r from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9]"
 >
-  <div className="w-full bg-transparent rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300 backdrop-blur-[2px]">
+  <div className="w-full bg-[#000C1B] md:bg-transparent rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300 backdrop-blur-[2px]">
     {/* Top Row */}
     <div className="flex items-center justify-between gap-4">
       <p
@@ -308,7 +303,7 @@ const SectionSix = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="homepage-section-six w-full lg:min-h-[780px] bg-[#000C1B] section-six relative overflow-x-hidden">
+    <section ref={sectionRef} className="homepage-section-six w-full lg:min-h-[780px] bg-[#000C1B] section-six relative overflow-hidden">
       <div className='w-full h-[83%] bg-[#000c1bf2] absolute bottom-0'></div>
       
       <div className='w-[0vw] h-[0vw] rounded-full absolute top-[100px] left-[-60px] opacity-[50%] blur-circle2'></div>

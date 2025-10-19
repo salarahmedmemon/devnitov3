@@ -71,18 +71,18 @@ const SectionThree = () => {
   };
 
   return (
-    <div className="w-full min-h-[1000px] bg-[#0A131C] p-5 sm:p-20">
-      <div className="w-[99%] h-auto gradient-border rounded-[1vw] p-1 mx-auto">
+    <div className="w-full h-[2000px] md:min-h-[1000px] bg-[#0A131C] p-5 sm:p-20">
+      <div className="w-[99%] h-full md:h-auto gradient-border rounded-[1vw] p-1 mx-auto">
         <div className="w-full h-full bg-[#0A131C] rounded-[1vw] text-white">
           {/* Top Section */}
           <div
             className={`transition-all duration-700 ease-in-out ${
-              isExpanded ? "-translate-y-[64px]" : "translate-y-0"
+              isExpanded ? "-translate-y-[80px] md:-translate-y-[64px]" : "translate-y-0"
             }`}
           >
             <div
               ref={topRef}
-              className="text-center w-[40vw] sm:w-[34vw] md:w-[14vw] mx-auto pt-6 sm:pt-[120px]"
+              className="text-center w-[40vw] sm:w-[34vw] md:w-[14vw] mx-auto pt-[100px] sm:pt-[120px]"
             >
               <h1 className="text-[24px] sm:text-[5vw] md:text-[2.4vw] border-t-3 border-t-[#77CCF3]">
                 Our Design
@@ -117,7 +117,7 @@ const SectionThree = () => {
             >
               <div
                 ref={rightRef}
-                className="w-full bg-[#0A131C] rounded-lg p-8 flex items-start justify-between gap-6 flex-wrap"
+                className="w-full bg-[#0A131C] rounded-lg pt-2 md:p-8 flex items-start justify-between gap-6 flex-wrap"
               >
                 {[
                   {
@@ -164,7 +164,7 @@ const SectionThree = () => {
                       <h3 className="text-[18px] text-white font-semibold mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[12px] text-gray-300 leading-relaxed text-start">
+                      <p className="text-[12px] text-gray-300 leading-relaxed text-center md:text-start">
                         {item.text}
                       </p>
                     </div>

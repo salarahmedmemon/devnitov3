@@ -21,7 +21,7 @@ const SectionTwo = () => {
             </div>
             <h2 className="text-[#4C4886] relative z-[50] text-[38px] font-semibold text-center">Certified Excellence</h2>
 
-            <div className="w-full relative z-[50] flex items-center justify-center flex-wrap mt-[74px] gap-5 pb-[10vw]">
+            <div className="w-full relative z-[50] flex items-center justify-center flex-wrap mt-[74px] gap-5 p-4 md:p-0 pb-[10vw]">
                 <div className="w-[414px] h-[223px] bg-[#16171C] rounded-lg p-5 ">
                     <div className="w-[37px] h-[37px] border-2 border-[#75BAFF] rounded sm:rounded-lg flex items-center justify-center">
                         <div className="w-[14.5px] h-[14.5px] rounded-full bg-[#75BAFF]"></div>

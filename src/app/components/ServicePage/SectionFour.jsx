@@ -68,7 +68,7 @@ const SectionFour = () => {
     }, []);
 
     return (
-        <div className="w-full h-[788px] flex flex-col-reverse md:flex-row items-center justify-center bg-[#EEEEEE] relative overflow-hidden">
+        <div className="w-full h-[788px] flex flex-col-reverse md:flex-row items-center justify-center bg-[#EEEEEE] relative overflow-hidden pt-[100px] md:pt-0">
             {/* Background Circles */}
             <div className="flex w-[30vw] h-[30vw] rounded-full p-[2px] bg-[#BFD6EF] absolute top-[-12vw] right-[-12vw] items-center justify-center">
                 <div className="w-full h-full bg-[#E8EBEE] rounded-full"></div>
@@ -126,9 +126,9 @@ const SectionFour = () => {
             {/* RIGHT CONTENT (Image) */}
             <div
                 ref={imageRef}
-                className="z-1000 w-full md:w-[40%] h-[30vh] md:h-[100vh] flex items-center justify-center"
+                className="z-1000 w-full md:w-[40%] flex items-center justify-center mb-[30px] md:mb-0"
             >
-                <div className="w-[400px] h-[400px] relative rounded-lg overflow-hidden group">
+                <div className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] relative rounded-lg overflow-hidden group">
                     <img
                         src="/img/servicepage/sectionfour/image.png"
                         className="w-full h-full rounded-lg object-cover"
