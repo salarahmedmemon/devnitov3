@@ -79,7 +79,7 @@ const SectionTwo = () => {
         ref={imageRef}
         className="lg:hidden w-[70%] h-[310px] md:w-[40%] mx-auto mt-[120px]"
       >
-        <img src="/img/careerspage/image04.png" className="ms-[4%]" />
+        <img src="/img/careerspage/image04.png" className="ms-[4%]" loading="lazy" />
       </div>
 
       {/* CONTENT */}
@@ -129,7 +129,7 @@ const SectionTwo = () => {
         <div ref={imageRef} className="w-[511px] h-[419px] z-[1000] ms-[5%]">
           <img
             src="/img/casestudiespage/image02.png"
-            className="w-full h-full object-cover ms-[4%]"
+            className="w-full h-full object-cover ms-[4%]" loading="lazy"
           />
         </div>
 

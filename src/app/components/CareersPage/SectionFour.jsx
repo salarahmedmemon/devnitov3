@@ -18,7 +18,7 @@ const SectionFour = () => {
             <div className="w-full h-full z-[999] pt-[80px] md:pt-[180px]">
                 <div className="w-[80%] h-[80%] mx-auto flex flex-col lg:flex-row items-center justify-center">
                     <div className="w-full md:w-[60%] lg:w-[40%] h-full">
-                        <img src="/img/careerspage/lady.png" />
+                        <img src="/img/careerspage/lady.png" loading="lazy" />
                     </div>
                     <div className="w-full md:w-[60%] h-full">
                         <span className="hidden lg:block text-[#4A4A4A] text-[20px]">Why Choose Us?</span>
@@ -34,45 +34,6 @@ const SectionFour = () => {
                     </div>
                 </div>
             </div>
-
-
-{/* 
-            <div className="xl:hidden w-full h-full pt-[10vw] ps-[4vw] z-10">
-                <span className="text-[#4A4A4A] text-[4vw] sm:text-[2.2vw] md:text-[1.5vw]">Why Choose Us?</span>
-                <h1 className="text-[#4C4886] text-[6vw] sm:text-[4vw] md:text-[2.4vw] font-semibold">Safeguard Your Brand With Cyber Security And IT Solutions</h1>
-                <p className="text-[#ABABAB] text-[4vw] mt-[3vw] pe-[2vw] font-semibold   sm:text-[2.2vw]   md:text-[2vw]   lg:text-[1.8vw]  ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
-                <div className="w-[95%] sm:w-[90%] my-[5vw] sm:my-[3vw] md:my-0  md:mt-[4vw]  lg:mt-[3vw] flex flex-wrap gap-4">
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Remote IT Assistance</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Cloud Services</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Managed IT Service</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Remote IT Assistance</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Practice IT Management</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] w-[47%] sm:w-[48%] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Practice IT Management</li></ul>
-                </div>
-            </div>
-            <div className="xl:hidden w-full sm:w-[80%] md:w-[50%] sm:h-full">
-                <img src="/img/servicedetailspage/image.png" className="w-[80%] mt-[6vw] md:mt-[10vw] mx-auto md:ms-[4vw]" />
-            </div>
-
-
-            <div className="hidden xl:block w-[600px] z-[50]">
-                <img src="/img/careerspage/lady.png" />
-            </div>
-            <div className="hidden xl:block w-[800px] h-full z-10">
-                <span className="text-[#4A4A4A] text-[28px]">Why Choose Us?</span>
-                <h1 className="text-[#4C4886] text-[48px] font-[600]">Safeguard Your Brand With Cyber Security And IT Solutions</h1>
-                <div className="w-[95%] sm:w-[90%] my-[5vw] sm:my-[3vw] md:my-0  md:mt-[4vw]  lg:mt-[3vw] flex flex-wrap gap-4">
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Remote IT Assistance</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Cloud Services</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Managed IT Service</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Remote IT Assistance</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Practice IT Management</li></ul>
-                    <ul className="list-disc text-[#4D4987] px-2 py-[2vw] sm:py-[.7vw] xl:py-[6px] font-[600] text-[12px] sm:text-[2vw] md:text-[1.4vw] xl:text-[20px] ps-[5vw] sm:ps-[3vw] md:ps-[2.5vw] xl:ps-[40px] w-[47%] sm:w-[48%] xl:w-[286px] xl:h-[46px] bg-white rounded border-l-2 border-[#4D4987] hover:bg-[#4C4886] hover:text-white transition-all duration-200 ease-in-out cursor-pointer"><li>Practice IT Management</li></ul>
-                </div>
-            </div> */}
-
         </div>
     );
 };

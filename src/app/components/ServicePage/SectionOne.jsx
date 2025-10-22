@@ -18,48 +18,42 @@ const SectionOne = () => {
   const rightRef = useRef(null);
   const tl = useRef(null);
 
-  // MOBILE REFS
-  // const mImg1 = useRef(null);
-  // const mImg2 = useRef(null);
-  // const mContent = useRef(null);
-  // const mRight = useRef(null);
-
   useLayoutEffect(() => {
-  if (!loaded || !sectionRef.current) return;
+    if (!loaded || !sectionRef.current) return;
 
-  const ctx = gsap.context(() => {
-    if (window.innerWidth > 1280) {
-      tl.current = gsap.timeline({ paused: false }); // play immediately
+    const ctx = gsap.context(() => {
+      if (window.innerWidth > 1280) {
+        tl.current = gsap.timeline({ paused: false }); // play immediately
 
-      tl.current.fromTo(
-        imgRef1.current,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        imgRef2.current,
-        { y: 100, x: -100, opacity: 0 },
-        { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        contentRef.current,
-        { x: -150, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        rightRef.current,
-        { x: 150, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
-        0
-      );
-    }
-  }, sectionRef);
+        tl.current.fromTo(
+          imgRef1.current,
+          { y: -100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          imgRef2.current,
+          { y: 100, x: -100, opacity: 0 },
+          { y: 0, x: 0, duration: 1, opacity: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          contentRef.current,
+          { x: -150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+        tl.current.fromTo(
+          rightRef.current,
+          { x: 150, opacity: 0 },
+          { x: 0, opacity: 1, duration: 1, ease: "power3.out" },
+          0
+        );
+      }
+    }, sectionRef);
 
-  return () => ctx.revert();
-}, [loaded]);
+    return () => ctx.revert();
+  }, [loaded]);
 
 
   // 2. functions/methods
@@ -70,49 +64,25 @@ const SectionOne = () => {
 
       <div className="hidden md:block w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0 bg-[#04080B]">
         <div className="w-full h-full opacity-24">
-          <Image
-            src="/img/servicepage/image.png"
-            alt="background image"
-            fill
-            placeholder="blur"
-            className="object-cover"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA..."
-          />
+          <img src="/img/servicepage/image.png" alt="background image" loading="lazy" className="w-full h-full object-cover" />
         </div>
       </div>
 
       <div className="block md:hidden w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0 bg-[#04080B]">
         <div className="w-full h-full opacity-15">
-          <Image
-            src="/img/aboutpage/image.png"
-            alt="background image"
-            fill
-            placeholder="blur"
-            className="object-cover"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA..."
-          />
+          <img src="/img/aboutpage/image.png" alt="background image" className="w-full h-full object-cover" loading="lazy" />
         </div>
       </div>
-      {/* <div className="w-full h-[450px] sm:h-[650px] lg:[844px] xl:h-[731px] absolute top-0 left-0">
-        <Image
-          src="/img/servicepage/image.png"
-          alt="background image"
-          fill
-          placeholder="blur"
-          className="object-cover"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA..."
-        />
-      </div> */}
 
       <Header />
       <div className="w-full h-full pt-0 relative overflow-hidden">
 
         <img ref={imgRef1}
           src="/img/aboutpage/sectionone/image01.png"
-          className="img-top hidden lg:block absolute top-[-5%] left-[30%] h-[16vw]"
+          className="img-top hidden lg:block absolute top-[-5%] left-[30%] h-[16vw]" loading="lazy"
         />
         <img ref={imgRef2}
-          src="/img/aboutpage/sectionone/image02.png"
+          src="/img/aboutpage/sectionone/image02.png" loading="lazy"
           className="img-left-bottom hidden lg:block absolute top-[0vw] right-[10vw] rotate-30 w-[5vw]"
         />
 
@@ -137,7 +107,7 @@ const SectionOne = () => {
           <div className="main-img-container w-[234px] h-[212px] sm:w-[44vw] sm:h-full md:w-[350px] md:h-[100px] flex items-center justify-center">
             <img
               src="/img/servicepage/sectionone/image01.png"
-              className="pt-0 sm:pt-10 md:pt-40"
+              className="pt-0 sm:pt-10 md:pt-40" loading="lazy"
             />
           </div>
 
@@ -158,7 +128,7 @@ const SectionOne = () => {
           </div>
           <div ref={rightRef} className="w-full h-[80%] flex items-center justify-center">
             <img src="/img/servicepage/sectionone/image01.png"
-              className="w-[500px]"
+              className="w-[500px]" loading="lazy"
             />
           </div>
         </div>

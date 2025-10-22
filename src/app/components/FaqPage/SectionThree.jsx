@@ -122,7 +122,7 @@ const SectionThree = () => {
                 setClicked(true);
                 setActiveIndex(i);
               }}
-              className="w-full h-[5vh] md:h-[8vh] border-[2px] border-gray-300 rounded-lg relative cursor-pointer"
+              className="w-full h-[64px] border-[2px] border-gray-300 rounded-lg relative cursor-pointer"
             >
               <img
                 src="/img/faqpage/arrow.png"

@@ -31,7 +31,7 @@ const SectionFour = () => {
                 </div>
             </div>
             <div className="w-full sm:w-[80%] md:w-[50%] sm:h-full">
-                <img src="/img/servicedetailspage/image.png" className="w-[80%] mt-[6vw] md:mt-[10vw] mx-auto md:ms-[4vw]" />
+                <img src="/img/servicedetailspage/image.png" className="w-[80%] mt-[6vw] md:mt-[10vw] mx-auto md:ms-[4vw]" loading="lazy" />
             </div>
 
         </div>

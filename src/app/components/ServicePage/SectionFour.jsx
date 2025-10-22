@@ -100,9 +100,8 @@ const SectionFour = () => {
                 ].map((item, index) => (
                     <div
                         key={index}
-                        className={`w-full md:w-[35vw] ${
-                            index === 0 ? "mt-[3vw]" : "mt-[1vw]"
-                        } mx-auto md:mx-0`}
+                        className={`w-full md:w-[35vw] ${index === 0 ? "mt-[3vw]" : "mt-[1vw]"
+                            } mx-auto md:mx-0`}
                     >
                         <div className="flex items-center justify-between">
                             <span>{item.title}</span>
@@ -132,7 +131,7 @@ const SectionFour = () => {
                     <img
                         src="/img/servicepage/sectionfour/image.png"
                         className="w-full h-full rounded-lg object-cover"
-                        alt="Service"
+                        alt="Service" loading="lazy"
                     />
                     <div className="absolute inset-0 bg-[#0a131c9b] flex items-center justify-center 
                                     opacity-0 group-hover:opacity-100 transition-opacity duration-500">

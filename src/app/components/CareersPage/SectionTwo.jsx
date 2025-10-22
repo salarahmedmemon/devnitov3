@@ -23,7 +23,7 @@ const SectionTwo = () => {
 
             {/* IMAGE */}
             <div className="lg:hidden w-[70%] h-[310px] md:w-[40%] mx-auto mt-[120px]">
-                <img src="/img/careerspage/image04.png" className="ms-[4%]"/>
+                <img src="/img/careerspage/image04.png" className="ms-[4%]" loading="lazy" />
             </div>
 
             {/* CONTENT */}
@@ -48,7 +48,7 @@ const SectionTwo = () => {
             {/* FOR LARGE SCREEN */}
             <div className="hidden lg:flex w-full h-[78%] lg:mt-[20%] xl:mt-[16%] justify-between">
                 <div className="w-[511px] h-[419px] ms-[8%] z-[1000]">
-                    <img src="/img/careerspage/image04.png" className="w-full h-full object-cover ms-[4%]" />
+                    <img src="/img/careerspage/image04.png" className="w-full h-full object-cover ms-[4%]" loading="lazy" />
                 </div>
 
                 <div className="w-[680px] h-full lg:ms-[5%] me-[4%]">

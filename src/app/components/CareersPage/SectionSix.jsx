@@ -18,12 +18,12 @@ const SectionSix = () => {
             <div className="mx-auto text-center w-[303px] h-[100px] border-t-[3px] border-[#4C4886] text-[32px] font-[500]">
                 <h1 className="text-[#0A1119]">Our Latest</h1>
                 <h2 className="text-[#4C4886]">Article</h2>
-            </div>   
+            </div>
 
             <div className="w-[90%] mx-auto h-[401px] flex flex-wrap items-center justify-center gap-[21px] mt-[53px]">
                 <div className="w-full md:w-[30%] z-[50] h-full">
                     <div className="w-full h-[80%] rounded-[10px]">
-                        <img src="/img/careerspage/sectionsix/image01.png" className="w-full h-full object-cover rounded-[10px]" />
+                        <img src="/img/careerspage/sectionsix/image01.png" className="w-full h-full object-cover rounded-[10px]" loading="lazy" />
                     </div>
 
                     <div className="w-full h-[20%] flex items-center justify-between px-[30px] text-[16px] font-[600] text-[#4C4886]">
@@ -35,7 +35,7 @@ const SectionSix = () => {
 
                 <div className="sm:w-full md:w-[30%] z-[50] h-full">
                     <div className="w-full h-[80%] rounded-[10px]">
-                        <img src="/img/careerspage/sectionsix/image02.png" className="w-full h-full object-cover rounded-[10px]" />
+                        <img src="/img/careerspage/sectionsix/image02.png" className="w-full h-full object-cover rounded-[10px]" loading="lazy" />
                     </div>
 
                     <div className="w-full h-[20%] flex items-center justify-between px-[30px] text-[16px] font-[600] text-[#4C4886]">
@@ -47,7 +47,7 @@ const SectionSix = () => {
 
                 <div className="sm:w-full md:w-[30%] z-[50] h-full">
                     <div className="w-full h-[80%] rounded-[10px]">
-                        <img src="/img/careerspage/sectionsix/image03.png" className="w-full h-full object-cover rounded-[10px]" />
+                        <img src="/img/careerspage/sectionsix/image03.png" className="w-full h-full object-cover rounded-[10px]" loading="lazy" />
                     </div>
 
                     <div className="w-full h-[20%] flex items-center justify-between px-[30px] text-[16px] font-[600] text-[#4C4886]">
@@ -56,7 +56,7 @@ const SectionSix = () => {
                         <li> <span className="w-[10px] h-[10px] rounded-full bg-[#AAAAAA]"></span> Saturday</li>
                     </div>
                 </div>
-            </div>         
+            </div>
 
         </div>
     );

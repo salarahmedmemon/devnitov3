@@ -19,41 +19,41 @@ const SectionOne = () => {
     const tl = useRef(null);
 
     useLayoutEffect(() => {
-  if (!loaded || !sectionRef.current) return;
+        if (!loaded || !sectionRef.current) return;
 
-  const ctx = gsap.context(() => {
-    if (window.innerWidth > 1280) {
-      tl.current = gsap.timeline({ paused: false }); // play immediately (no mouse event)
-      
-      tl.current.fromTo(
-        imgRef1.current,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        imgRef2.current,
-        { y: 100, x: -100, opacity: 0 },
-        { y: 0, x: 0, duration: 1.4, opacity: 1, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        contentRef.current,
-        { x: -150, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
-        0
-      );
-      tl.current.fromTo(
-        rightRef.current,
-        { x: 150, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
-        0
-      );
-    }
-  }, sectionRef);
+        const ctx = gsap.context(() => {
+            if (window.innerWidth > 1280) {
+                tl.current = gsap.timeline({ paused: false }); // play immediately (no mouse event)
 
-  return () => ctx.revert();
-}, [loaded]);
+                tl.current.fromTo(
+                    imgRef1.current,
+                    { y: -100, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+                    0
+                );
+                tl.current.fromTo(
+                    imgRef2.current,
+                    { y: 100, x: -100, opacity: 0 },
+                    { y: 0, x: 0, duration: 1.4, opacity: 1, ease: "power3.out" },
+                    0
+                );
+                tl.current.fromTo(
+                    contentRef.current,
+                    { x: -150, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+                    0
+                );
+                tl.current.fromTo(
+                    rightRef.current,
+                    { x: 150, opacity: 0 },
+                    { x: 0, opacity: 1, duration: 1.4, ease: "power3.out" },
+                    0
+                );
+            }
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, [loaded]);
 
 
 
@@ -64,14 +64,7 @@ const SectionOne = () => {
         <div ref={sectionRef} className="w-full h-[472px] sm:h-[550px] md:h-[734px] pt-[9px] xl:pt-[43.34px] overflow-hidden">
             {/* LARGE SCREEN BACKGROUND IMAGE */}
             <div className="w-full h-[472px] sm:h-[550px] md:h-[734px] absolute top-0 left-0 blur-[4px]">
-                <Image
-                    src="/img/aboutpage/image.png"
-                    alt="background image"
-                    fill="true"
-                    placeholder="blur"
-                    className="object-cover"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAACcSURBVI3BwUrDQBSG0e/PXDJaFfQB2pU0FOpaEJ++G0FcCCItZKnLLkwJmUyUuYpQcOk5ClY7/2D8IQmqil+l4O4cGT8kofqUy+sb1rf3yGH79MC+fcZzwt0xEFWccd7cMV82vL13jEPHxWLFp11x2G0oY49VwVB9Rt8+8vK6IdaRnDMIFE+QRVDCcCjDB16+cHdSmjjSMKEQAOcbKF45aEp4Xz8AAAAASUVORK5CYII="
-                />
+                <img src="/img/aboutpage/image.svg" alt="background image" className="w-full h-full object-cover" loading="lazy"/>
             </div>
 
             <Header />
@@ -81,17 +74,7 @@ const SectionOne = () => {
                 <div className="w-[85%] h-[149px] md:w-[58%] lg:w-[60%] md:h-[30%] lg:h-[34%] flex gap-[20px] mt-[38px] mx-auto">
                     {/* IMAGE ONE */}
                     <div className="w-[100%] h-full rounded-[10px] z-10 border border-[#4AFFF0] shadow-[0_2px_7px_0_#5FFFE4] relative group overflow-hidden cursor-pointer">
-                        {/* <div className="w-full h-full relative z-0">
-                            <Image
-                                src="/img/aboutpage/image01.png"
-                                alt="About page image one"
-                                fill
-                                className="object-cover"
-                                placeholder="blur"
-                                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
-                            />
-                        </div> */}
-                        <img src="/img/aboutpage/image01.png" alt="image one" className="w-full h-full object-cover" />
+                        <img src="/img/aboutpage/image01.png" alt="image one" className="w-full h-full object-cover" loading="lazy" />
 
                         {/* Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -101,18 +84,7 @@ const SectionOne = () => {
 
                     {/* IMAGE TWO */}
                     <div className="w-[100%] h-full rounded-[10px] z-10 border border-[#4AFFF0] shadow-[0_2px_7px_0_#5FFFE4] relative group overflow-hidden cursor-pointer">
-                        {/* <div className="w-full h-full relative z-0">
-                            <Image
-                                src="/img/aboutpage/image02.png"
-                                alt="About page image two"
-                                fill
-                                className="object-cover"
-                                placeholder="blur"
-                                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
-                            />
-                        </div> */}
-                        <img src="/img/aboutpage/image02.png" alt="image two" className="w-full h-full object-cover" />
-
+                        <img src="/img/aboutpage/image02.png" alt="image two" className="w-full h-full object-cover" loading="lazy"/>
                         {/* Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                             <h2 className="text-white text-lg sm:text-xl font-bold">Forex Trading</h2>
@@ -134,25 +106,12 @@ const SectionOne = () => {
             <div className="hidden xl:flex w-full h-full justify-between pt-[120px] relative">
                 {/* ASTRAUNOT IMAGE */}
                 <div ref={imgRef1} className="absolute w-[173.36px] h-[217.96px] top-[-3%] left-[32%]">
-                    <Image
-                        src="/img/aboutpage/sectionone/image01.png"
-                        alt="astrounaot image"
-                        fill="true"
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAAklEQVR4AewaftIAAACcSURBVI3BwUrDQBSG0e/PXDJaFfQB2pU0FOpaEJ++G0FcCCItZKnLLkwJmUyUuYpQcOk5ClY7/2D8IQmqil+l4O4cGT8kofqUy+sb1rf3yGH79MC+fcZzwt0xEFWccd7cMV82vL13jEPHxWLFp11x2G0oY49VwVB9Rt8+8vK6IdaRnDMIFE+QRVDCcCjDB16+cHdSmjjSMKEQAOcbKF45aEp4Xz8AAAAASUVORK5CYII="
-
-                    />
+                    <img src="/img/aboutpage/sectionone/image01.png" alt="astrounaot image" loading="lazy" className="w-full h-full object-cover"/>
                 </div>
 
                 {/* ROCKET IMAGE */}
                 <div ref={imgRef2} className="absolute w-[66.87px] h-[136.36px] rotate-[24deg] top-[2%] right-[18%]">
-                    <Image
-                        src="/img/aboutpage/sectionone/image02.png"
-                        alt="astrounaot image"
-                        fill="true"
-                        placeholder="blur"
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
-                    />
+                    <img src="/img/aboutpage/sectionone/image02.png" alt="rocket image" loading="lazy" className="w-full h-full object-cover"/>
                 </div>
 
 
@@ -179,7 +138,7 @@ const SectionOne = () => {
                               className="w-full h-full object-cover"
                             /> */}
                             <div className="w-full h-full relative z-0">
-                                <Image
+                                {/* <Image
                                     src="/img/aboutpage/image01.png"
                                     alt="About page image one"
                                     fill="true"
@@ -187,7 +146,8 @@ const SectionOne = () => {
                                     placeholder="blur"
                                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYPS D:\project_01> node generateBlur.js
 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4AewaftIAAAIOSURBVI3BO2gTYQAH8P/33Ze75GIeTS5pGlJIayCi2BisVgfjUKJUtJuLdLEiSHBRN+tjUaE4SECcChK1hYouYgZB8LHqIq1YMYrm1TbVShvzuuTyeYEOUhL198P/GB0dVRj+IRgM7lQUp5+hA5NsFmxW63Wfz3chEonEBbQx5nbSOjMkiGyORQ9HaTqdzjG0IQFX99tsY2G3G665eUwv5asUm0w47LvLhE2oW7fhgdOPQ6EQEuZKimKTn5ROCpomDOS+4QxKkL98RtknvxGwYdbr3WPSGnfKRnnEU6lg39IijhIOYhXWphurZxl0D30+0UPpDBgLQNOwRWtgh6sLYo8Hv0za3djsQpVCNyBJJ5dVNaBKEuRqFYM2GS6nGzUJeJXKvIOOXlMUIhFyLlOvJyuMlXubGna5XJDsNrwvLCJcZEPQUYcg9KZU9eL4p6njfeG+qjw0iIX+IN6uL2uOYhMWu+kJdEKyVFq79/3EB6MgXBrukkd6jCryof7J7pcf5/yKxZKl2vnb2QJnaCF+EcR6ynDkCgLDj9YDJvFm5f6LY2VGngdfzzehY2jhq9tBVS/wFJCKN8BrP9KW2uNmUShiA0MLLxwEz1Mg9wxEukVYHLoi/sC4Ok7AV6JAPQsinyaGuIo2KAhxcL6yF0SJgVcz6IByXjsA0j0DiEkiJtAJA+SvhBgvE3Gqib/4DaqGsgqKrmLuAAAAAElFTkSuQmCC"
-                                />
+                                /> */}
+                                <img src="/img/aboutpage/image01.png" alt="About page image one" loading="lazy" className="w-full h-full object-cover" />
                             </div>
 
                             {/* Overlay */}
@@ -207,14 +167,15 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAUCAYAAAC07qxWAAAAAklEQVR4Ae
 
                             {/* Image */}
                             <div className="w-full h-full relative z-0">
-                                <Image
+                                {/* <Image
                                     src="/img/aboutpage/image02.png"
                                     alt="About page image two"
                                     fill="true"
                                     className="object-cover"
                                     placeholder="blur"
                                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAAklEQVR4AewaftIAAADqSURBVAXB30vCQADA8e+2293ttpNlCJUVTKIHoef+iP7i3nsOCnoSLKMfiy3U6bRzm/b5eCK0B6U0KjZEkUYrSRT4DKzi1CpSGTA8VojYGOI0xWQZ/fE1N96a6fOEcwkWj5MAssTD7wmfXuvYakHUVNyNHNLzqRvIf2vKckX5USFq51i4httiyihccp/DwkSsHKigJbaCl+854sr4XB4luK3j4fGVvVZom2JMTN3teJotadYVYv7XMvtcYGPDxfAM2x8QdDvmRcFXtWGbSLraId43jjRJaENNXm14Kyc0bYdWkkPXws8ayZ5/VN5dB/fPDaIAAAAASUVORK5CYII="
-                                />
+                                /> */}
+                                <img src="/img/aboutpage/image02.png" alt="About page image two" loading="lazy" className="w-full h-full object-cover" />
                             </div>
 
                             {/* Overlay */}

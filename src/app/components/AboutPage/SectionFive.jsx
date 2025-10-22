@@ -73,31 +73,31 @@ const SectionFive = () => {
                 className="form w-full md:w-[80vw] mx-auto flex items-center justify-center flex-wrap gap-8 p-4 opacity-0 mt-[40px] md:mt-[100px]"
             >
                 <input
-                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#AAAAAA] text-[#AAAAAA]"
                     placeholder="Enter Your Name:"
                     type="text"
                 />
                 <input
-                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    className="w-full md:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#AAAAAA] text-[#AAAAAA]"
                     placeholder="Enter Your Email:"
                     type="text"
                 />
                  
                 <input
-                    className="z-10 w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    className="z-10 w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#AAAAAA] text-[#AAAAAA]"
                     placeholder="Enter Your Phone No:"
                     type="text"
                 />
                 
                 <input
-                    className="w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
+                    className="w-full sm:w-[400px] h-[64px] rounded-lg ps-4 border-[2px] text-[22px] border-[#AAAAAA] text-[#AAAAAA]"
                     placeholder="Enter Your Subject:"
                     type="text"
                 />
                 
                 <textarea
-                    className="z-10 w-full md:w-[830px] h-[165px] rounded-lg ps-4 border-[2px] text-[22px] border-[#9d9797]"
-                    placeholder="Detailed Subject:"
+                    className="z-10 w-full md:w-[830px] h-[165px] rounded-lg ps-4 border-[2px] text-[22px] border-[#AAAAAA] text-[#AAAAAA]"
+                    placeholder="Enter Your Subject:"
                 ></textarea>
                 
                 <div className="z-10 w-full md:w-[830px] flex items-start">

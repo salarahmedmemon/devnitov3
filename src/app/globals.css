@@ -218,10 +218,14 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .sextion-six-homepage {
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
+
+.frequently-asked-question-border {
+  border: 3px solid transparent; /* Required for border-image to work */
+  border-image: linear-gradient(to right, #FA1AC2, #1AE4FA, #1CDE63D9) 1;
+}
+
+
+.blur-edge {
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
 }

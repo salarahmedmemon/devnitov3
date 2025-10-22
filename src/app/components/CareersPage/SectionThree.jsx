@@ -59,7 +59,7 @@ const SectionThree = () => {
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute top-[-4%] right-[-4%] blur-[250px]"></div>
                 <div className="w-[155px] h-[179px] bg-[#1AE4FA] rounded-full absolute bottom-[-4%] left-[-4%] blur-[250px]"></div>
             </div>
-            
+
             <div className="w-full h-full section-three-bgImage pt-2 sm:pt-4 md:pt-6">
 
                 <div className="relative section-three-title mt-[20px] ld:mt-[50px]">
@@ -76,11 +76,11 @@ const SectionThree = () => {
                 <div className="relative w-full mt-4 sm:mt-6 md:mt-10 p-0 md:p-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <img
                         src="/img/aboutpage/sectionthree/rightLogo.png"
-                        className="absolute top-[-50%] right-[-4%]"
+                        className="absolute top-[-50%] right-[-4%]" loading="lazy"
                     />
-                    
+
                     <img
-                        src="/img/aboutpage/sectionthree/leftLogo.png"
+                        src="/img/aboutpage/sectionthree/leftLogo.png" loading="lazy"
                         className="hidden md:block absolute bottom-[-5%] lg:bottom-[-10%] left-[-7%] lg:left-[-5%]"
                     />
 
@@ -99,21 +99,21 @@ const SectionThree = () => {
                                 <div className="w-full h-full">
                                     <div className="w-full h-[100px] sm:h-[150px]">
                                         <img
-                                            src={project.img}
+                                            src={project.img} loading="lazy"
                                             className="w-full h-full transition-all duration-500 group-hover:opacity-30"
                                         />
                                     </div>
                                 </div>
                                 <div className="w-full h-full">
                                     <div className="flex items-center justify-between mt-[1vw]">
-                                        <span className="flex items-center justify-between gap-2 text-white"> 
-                                            <img src="/img/careerspage/author.png" className="w-[3vw] lg:w-[20px]" /> 
-                                            <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">|</span> 
+                                        <span className="flex items-center justify-between gap-2 text-white">
+                                            <img src="/img/careerspage/author.png" className="w-[3vw] lg:w-[20px]" loading="lazy" />
+                                            <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">|</span>
                                             <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">Author</span>
                                         </span>
-                                        <span className="flex items-center justify-between gap-2 text-white"> 
-                                            <img src="/img/careerspage/image06.png" className="w-[3vw] lg:w-[20px]" /> 
-                                            <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">|</span> 
+                                        <span className="flex items-center justify-between gap-2 text-white">
+                                            <img src="/img/careerspage/image06.png" className="w-[3vw] lg:w-[20px]" loading="lazy" />
+                                            <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">|</span>
                                             <span className="text-[8px] sm:text-[12px] md:text-[16px] lg:text-[12px] xl:text-[14px]">1 Jan 2025</span>
                                         </span>
                                     </div>

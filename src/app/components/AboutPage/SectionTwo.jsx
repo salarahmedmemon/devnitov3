@@ -72,14 +72,15 @@ const SectionTwo = () => {
             {/* IMAGE */}
             <div ref={imageRef} className="lg:hidden w-[90%] h-[310px] md:w-[40%] mx-auto mt-[120px]">
                 <div className="w-full h-full relative ms-[4%]">
-                    <Image
+                    {/* <Image
                         src="/img/aboutpage/image03.png"
                         alt="image 03"
                         fill="true"
                         placeholder="blur"
                         className="object-cover"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAklEQVR4AewaftIAAAEpSURBVGNmQAIXLl3it7WzlbYwN/+2e/fuvwxIgIUBCI4ePaolJ/jmT2xK4AM+TUOxzfPWPpi755y64KcH/4KCgm4zAAHzgQMH2A8fPvy2o3fKX2NdARc+IwMZRmYlpRWTmm/++/P7RVNHO8eKpUt/szx79kxG4dcfQWthaSajn/80+Yyk8z6fYV3No2X3nIdTlPH9y1dPGBgYHjKvXbv2va6D/fNX/xnf2d3/ycHurZ1+8ejrlcLiDFv+Mfx6UFtb+4EBCJgYgODz58/MfHx893SzYnK4vzAyRPibpj569OjFv3///jNAATMDEDAxMQmxsLDoSGmIGShIKAgcP3Xs+pEzV46dPn16/9evX38yoAEBbk4OWXc702B+Xh55BgYGIQYGBg4GKAAAOcJxrLqJHhsAAAAASUVORK5CYII="
-                    />
+                    /> */}
+                    <img src="/img/aboutpage/image03.png" alt="left image" loading="lazy" className="w-full h-full object-cover" />
                 </div>
             </div>
 
@@ -111,14 +112,15 @@ const SectionTwo = () => {
             <div className="hidden lg:flex w-full h-[78%] mt-[14%] justify-between">
                 <div ref={imageRef} className="w-[511px] h-[419px] ms-[5%]">
                     <div className="w-full h-full relative ms-[4%]">
-                        <Image
+                        {/* <Image
                             src="/img/aboutpage/image03.png"
                             alt="image 03"
                             fill="true"
                             placeholder="blur"
                             className="object-cover"
                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAAklEQVR4AewaftIAAAEpSURBVGNmQAIXLl3it7WzlbYwN/+2e/fuvwxIgIUBCI4ePaolJ/jmT2xK4AM+TUOxzfPWPpi755y64KcH/4KCgm4zAAHzgQMH2A8fPvy2o3fKX2NdARc+IwMZRmYlpRWTmm/++/P7RVNHO8eKpUt/szx79kxG4dcfQWthaSajn/80+Yyk8z6fYV3No2X3nIdTlPH9y1dPGBgYHjKvXbv2va6D/fNX/xnf2d3/ycHurZ1+8ejrlcLiDFv+Mfx6UFtb+4EBCJgYgODz58/MfHx893SzYnK4vzAyRPibpj569OjFv3///jNAATMDEDAxMQmxsLDoSGmIGShIKAgcP3Xs+pEzV46dPn16/9evX38yoAEBbk4OWXc702B+Xh55BgYGIQYGBg4GKAAAOcJxrLqJHhsAAAAASUVORK5CYII="
-                        />
+                        /> */}
+                        <img src="/img/aboutpage/image03.png" alt="left image" loading="lazy" className="w-full h-full object-cover" />
                     </div>
                 </div>
 

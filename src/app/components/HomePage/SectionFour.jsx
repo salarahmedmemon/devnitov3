@@ -86,78 +86,78 @@ export const SectionFour = () => {
             <div className="w-[82%] mx-auto overflow-visible">
 
                 <div className='overflow-x-hidden'>
-                    <div className='w-full h-[200px] sm:min-h-[290px] sm:mt-[50px] flex items-center'>
+                    <div className='w-full h-[200px] sm:min-h-[290px] sm:mt-[50px] flex items-center blur-edge'>
                         <div className="flex h-full items-center gap-5 w-max animate-slide">
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/accor.png' alt='image one' />
+                                    <img src='/img/homepage/sectionfour/accor.png' alt='image one' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image two'/>
+                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image two' loading='lazy'/>
                                 </div>                                
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/jb.png' alt='image three' />
+                                    <img src='/img/homepage/sectionfour/jb.png' alt='image three' loading='lazy'/>
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image three' />
+                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image three' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px] flex items-center justify-center'>
-                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image four' />
+                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image four' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px] flex items-center justify-center'>
-                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image five' />
+                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image five' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/accor.png' alt='image six' />
+                                    <img src='/img/homepage/sectionfour/accor.png' alt='image six' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image seven' />
+                                    <img src='/img/homepage/sectionfour/naugespa.png' alt='image seven' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/jb.png' alt='image eight' />
+                                    <img src='/img/homepage/sectionfour/jb.png' alt='image eight' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px]'>
-                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image nine' />
+                                    <img src='/img/homepage/sectionfour/medisan.png' alt='image nine' loading='lazy' />
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px] flex items-center justify-center'>
-                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image ten'/>
+                                    <img src='/img/homepage/sectionfour/ghol.png' alt='image ten' loading='lazy'/>
                                 </div>
                             </div>
 
-                            <div className='isolate w-[91px] h-[70px] sm:w-[163px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
+                            <div className='isolate w-[91px] h-[70px] sm:w-[200px] sm:h-[154px] bg-[#F5F5F5] z-[1000] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.10),0_18px_10px_rgba(0,0,0,0.09),0_40px_24px_rgba(0,0,0,0.05),0_72px_29px_rgba(0,0,0,0.01),0_112px_31px_rgba(0,0,0,0)]'>
                                 <div className='w-[112px] h-[83px] flex items-center justify-center'>
-                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image eleven'/>
+                                    <img src='/img/homepage/sectionfour/crosstex.png' alt='image eleven' loading='lazy'/>
                                 </div>
                             </div>
                         </div>

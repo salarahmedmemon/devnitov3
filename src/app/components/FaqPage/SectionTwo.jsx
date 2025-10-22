@@ -71,6 +71,7 @@ const SectionTwo = () => {
                     <img
                         src="/img/faqpage/faq.png"
                         className="w-[50%] md:w-[30vw]"
+                        loading="lazy"
                     />
                 </div>
 

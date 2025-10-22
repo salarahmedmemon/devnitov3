@@ -167,10 +167,10 @@ function FAQItem({ q, a1, a2, id }) {
   return (
    <div
   ref={wrapperRef}
-  className="relative sextion-six-homepage w-full sm:w-[45%] lg:w-[90%] lg:mx-auto mt-[2vw] rounded-lg p-[2px] bg-gradient-to-r from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9]"
+  className="relative rounded-[100px] frequently-asked-question-border w-full sm:w-[45%] lg:w-[90%] lg:mx-auto mt-[2vw] p-[2px]"
 >
-  <div className="w-full bg-[#000C1B] md:bg-transparent rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300 backdrop-blur-[2px]">
-    {/* Top Row */}
+  <div className="w-full rounded-lg px-8 md:px-14 py-3 md:py-6 flex flex-col justify-center transition-all duration-300 backdrop-blur-[2px]">
+    
     <div className="flex items-center justify-between gap-4">
       <p
         className={`text-[4.2vw] sm:text-[1rem] md:text-[1.4rem] transition-colors duration-300 ${
@@ -311,7 +311,10 @@ const SectionSix = () => {
       <div className="w-full h-[100px] sm:h-[150px] bg-white pt-[26px] ps-[26px] sm:pt-[39px] sm:ps-[86px]">
         <div className="w-[454px] h-[74px]">
           <h1 ref={h1Ref} className="border-t-[3px] border-[#4C4886] w-[50px] h-[24px] sm:w-[87px] sm:h-[42px] text-[20px] sm:text-[32px] font-[500]">FAQ's</h1>
-          <h2 ref={h2Ref} className="text-[20px] sm:text-[32px] font-[600] text-[#4C4886]">Frequently Asked Questions</h2>
+          <h2 ref={h2Ref} className="text-[20px] sm:text-[32px] font-[600] text-[#4C4886]"> <span class="bg-gradient-to-r from-[#FA1AC2] via-[#1AE4FA] to-[#1CDE63D9] bg-clip-text text-transparent font-bold">
+  Frequently
+</span>
+ Asked Questions</h2>
         </div>
       </div>
 

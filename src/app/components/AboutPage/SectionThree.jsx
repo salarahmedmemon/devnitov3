@@ -71,11 +71,11 @@ const SectionThree = () => {
           <div className="relative w-full sm:w-[90%] sm:mx-auto  mt-4 sm:mt-6 md:mt-10 p-0 md:p-6 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-10">
             <img
               src="/img/aboutpage/sectionthree/rightLogo.png"
-              className="hidden md:block absolute top-[-220px] right-[-106px]"
+              className="hidden md:block absolute top-[-220px] right-[-106px]" loading="lazy"
             />
             <img
               src="/img/aboutpage/sectionthree/leftLogo.png"
-              className="hidden md:block absolute bottom-[-40px] left-[-100px]"
+              className="hidden md:block absolute bottom-[-40px] left-[-100px]" loading="lazy"
             />
 
             {projects.map((project, index) => (
@@ -87,7 +87,7 @@ const SectionThree = () => {
                   
                 <img
                   src={project.img}
-                  className="rounded-lg w-full h-full object-cover transition-all duration-500 group-hover:opacity-30"
+                  className="rounded-lg w-full h-full object-cover transition-all duration-500 group-hover:opacity-30" loading="lazy"
                 />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center">

@@ -86,7 +86,7 @@ const SectionTwo = () => {
                     className="z-10 w-full md:w-[40%] h-full flex items-center justify-center">
                     <img
                         src="/img/servicepage/sectionone/image02.png"
-                        className="w-[80vw] sm:w-[60vw] md:w-[30vw]"
+                        className="w-[80vw] sm:w-[60vw] md:w-[30vw]" loading="lazy"
                     />
                 </div>
 
